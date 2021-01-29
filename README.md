@@ -27,9 +27,10 @@
   </tr>
 </table>
 
+<h6>Navegação entre pastas</h6>
+
 ```shell
-# Entrar em pasta específica
-#	$ cd <caminho da pasta>
+# sintaxe: $ cd <caminho da pasta>
 #Exemplos
 
 #(p/ pasta acima da atual)
