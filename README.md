@@ -5,21 +5,25 @@
   <tr>
     <td>
       <p align="center">
-        <img src="./img/logo_dio.png" alt="logo_dio" width="60%" />
-      </p>
-      <p align="center">
-        <img src="/img/logo_aceleracao_everis.png" alt="logo_aceleracao_everis" width="30%" />
+        <img src="./img/logo_dio.png" alt="logo_dio" width="50%" />
+        <img src="/img/logo_aceleracao_everis.png" alt="logo_aceleracao_everis" width="20%" />
       </p>
     </td>
   </tr>
 </table>
 
+<table style="width: 100%">
+  <tr>
+    <td>
       <p align="justify">
         Repositório criado para armazenar anotações e atividades desempenhadas no treinamento na plataforma da <a href="https://digitalinnovation.one/" target="_blank">Digital Inovattion One (DIO)</a> para o Processo seletivo de Engenheiros de Dados pela empresa <a href="https://www.everis.com/brazil" target="_blank">Everis</a>.
       </p>
       <p align="justify">
         Este tem tão somente o intuito de ser uma visão particular do autor e servir como uma forma de facilitar o acesso a todo conhecimento adquirido na atividade. Não é intenção do autor abordar de forma completa o conteúdo abordado nem tão pouco substituir o todo ou em parte o material original disponibilizado no <a href="https://web.digitalinnovation.one/acceleration/aceleracao-global-dev-4-everis?tab=path" target="_blank">site</a> do treinamento.
       </p>
+    </td>
+  </tr>
+</table>
 
 <h6>Navegação entre pastas</h6>
 
