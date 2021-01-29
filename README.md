@@ -27,6 +27,24 @@
   </tr>
 </table>
 
+```shell
+# Entrar em pasta específica
+#	$ cd <caminho da pasta>
+#Exemplos
+
+#(p/ pasta acima da atual)
+cd ..
+
+#(p/ o diretório raiz do SO)
+cd /
+
+#(p/ o diretório pessoal)
+cd ~
+
+#(p/ o específico)
+cd /home/arquivos
+```
+
 
 
 ------
