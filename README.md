@@ -31,11 +31,13 @@
 
 ------
 
+<p>
+  Live#1 - Abertura - Como trabalhar em um ambiente ágil e global - Especialista: Ivan Brum - Diretor Data & Analytics, everis <a href="https://www.linkedin.com/in/ivan-brum-960358/" target="_blank"><img src="/img/logo_likedin.jpg" alt="logo_likedin" width="20" height="20" /></a>
+</p>
 
 
-###### Live#1 - Abertura - Como trabalhar em um ambiente ágil e global
 
-​		       Especialista: Ivan Brum - Diretor Data & Analytics, everis [<img src="/img/logo_likedin.jpg" alt="logo_likedin" width="20" height="20" />](https://www.linkedin.com/in/ivan-brum-960358/)
+​		       
 
 ###### Curso#1 - Linux: A introdução ao sistema operacional
 
