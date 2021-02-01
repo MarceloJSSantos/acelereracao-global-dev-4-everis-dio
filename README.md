@@ -26,35 +26,55 @@
 </table>
 
 ------
-<p>
-  <h5>Live#1 - Abertura - Como trabalhar em um ambiente ágil e global</h5>
-  <p>
-    &ensp;Especialista: Ivan Brum - Diretor Data & Analytics, everis <a href="https://www.linkedin.com/in/ivan-brum-960358/" target="_blank"><img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
-  </p> 
-</p>
+<table style="width: 100%">
+  <tr>
+    <td>
+      <p>
+        <h5>Live#1 - Abertura - Como trabalhar em um ambiente ágil e global</h5>
+        <p>
+          &ensp;Especialista: Ivan Brum - Diretor Data & Analytics, everis <a href="https://www.linkedin.com/in/ivan-brum-960358/" target="_blank">
+          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
+        </p> 
+      </p>
+    </td>
+  </tr>
 
-<p>
-  <h5>Curso#1 - Linux: A introdução ao sistema operacional</h5>
-  <p>
-    &ensp;Instrutor: Bruno Campos
-  </p>
-</p>
+  <tr>
+      <td>
+        <p>
+          <h5>Curso#1 - Linux: A introdução ao sistema operacional</h5>
+          <p>
+            &ensp;Instrutor: Bruno Campos
+          </p>
+        </p>
+      </td>
+    </tr>
+  </tr>
 
-<p>
-  <h5>Curso#2 - Shell script - Manipulando Arquivos</h5>
-  <p>
-    &ensp;Instrutora: Daviny Vidal
-  </p>
-</p>
-
-<p>
-  <h5>Live#2 - Monitoramento de clusters Hadoop de alto nível com HDFS e Yarn</h5>
-  <h5>Live#3 - Orquestrando ambientes de big data distruibuidos com Zookeeper, Yarn e Sqoop</h5>
-  <p>
-    &ensp;Especialista: Rodrigo Garcia - Big Data Projects Team Lead, everis <a href="https://www.linkedin.com/in/rodsantosg/" target="_blank"><img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
-  </p>
-</p>
-
+  <tr>
+      <td>
+        <p>
+          <h5>Curso#2 - Shell script - Manipulando Arquivos</h5>
+          <p>
+            &ensp;Instrutora: Daviny Vidal
+          </p>
+        </p>
+      </td>
+    </tr>
+    
+   <tr>
+    <td>
+        <p>
+          <h5>Live#2 - Monitoramento de clusters Hadoop de alto nível com HDFS e Yarn</h5>
+          <h5>Live#3 - Orquestrando ambientes de big data distruibuidos com Zookeeper, Yarn e Sqoop</h5>
+          <p>
+            &ensp;Especialista: Rodrigo Garcia - Big Data Projects Team Lead, everis <a href="https://www.linkedin.com/in/rodsantosg/" target="_blank">
+            <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
+          </p>
+        </p>
+      </td>
+    </tr>
+</table>
 ------
 <h6>Navegação entre pastas</h6>
 
