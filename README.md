@@ -30,7 +30,7 @@
   <tr>
     <td>
       <p>
-        <h5 id="live1">Live#01 - Abertura - Como trabalhar em um ambiente ágil e global - <a href="#live1" target="_blank" title="Sem anotações ou atividades">🚫</a></h5>
+        <h5 id="live1">Live#01 - Abertura - Como trabalhar em um ambiente ágil e global - <a href="#live1" target="_blank" onclick="return false;" title="Sem anotações ou atividades">🚫</a></h5>
         <p>
           &ensp;Especialista: Ivan Brum - Diretor Data & Analytics, everis <a href="https://www.linkedin.com/in/ivan-brum-960358/" title="Perfil no LikedIn" target="_blank">
           <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
