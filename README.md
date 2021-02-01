@@ -34,24 +34,25 @@
 </p>
 
 <p>
-  <h6>Curso#1 - Linux: A introdução ao sistema operacional</h6>
-</p>
-<p>
+  <h5>Curso#1 - Linux: A introdução ao sistema operacional</h5>
+  <p>
   Instrutor: Bruno Campos
+  </p>
 </p>
+
 <p>
-  <h6>Curso#2 - Shell script - Manipulando Arquivos</h6>
-</p>
-<p>
+  <h5>Curso#2 - Shell script - Manipulando Arquivos</h5>
+  <p>
   Instrutora: Daviny Vidal
+  </p>
 </p>
 
-###### Live#2 - Monitoramento de clusters Hadoop de alto nível com HDFS e Yarn
-
-​		         Especialista: Rodrigo Garcia - Big Data Projects Team Lead, everis [<img src=".\img\logo_likedin.jpg" alt="logo_likedin" style="zoom:10%;" />](https://www.linkedin.com/in/rodsantosg/)
-
-
-
+<p>
+  <h5>Live#2 - Monitoramento de clusters Hadoop de alto nível com HDFS e Yarn</h5>
+  <p>
+  Especialista: Rodrigo Garcia - Big Data Projects Team Lead, everis <a href="https://www.linkedin.com/in/rodsantosg/" target="_blank"><img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
+  </p>
+</p>
 
 ------
 <h6>Navegação entre pastas</h6>
