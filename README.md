@@ -161,7 +161,7 @@
     </td>
   </tr>
   
-    <tr>
+  <tr>
     <td>
       <p>
         <h5>Live#13 - O que você precisa saber para construir APIs verdadeiramente restfull</h5>
