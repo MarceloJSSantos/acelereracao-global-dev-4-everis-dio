@@ -42,7 +42,8 @@
   <tr>
       <td>
         <p>
-          <h5>Curso#01 - Linux: A introdução ao sistema operacional - <a href="https://google.com" target="_blank" title="Anotações e/ou atividades">📝</a></h5>
+          <h5>Curso#01 - Linux: A introdução ao sistema operacional - 
+            <a href="https://google.com" target="_blank" title="Anotações e/ou atividades">📝</a></h5>
           <p>
             &ensp;Instrutor: Bruno Campos
           </p>
