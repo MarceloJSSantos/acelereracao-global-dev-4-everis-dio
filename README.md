@@ -54,7 +54,7 @@
   <tr>
       <td>
         <p>
-          <h5>Curso#02 - Shell script - Manipulando Arquivos</h5>
+          <h5>Curso#02 - Shell script - Manipulando Arquivos - <a href="https://google.com" target="_blank" title="Anotações e/ou atividades">📝</a></h5>
           <p>
             &ensp;Instrutora: Daviny Vidal
           </p>
@@ -135,7 +135,55 @@
         </p>
       </p>
     </td>
-  </tr>  
+  </tr>
+  
+  <tr>
+    <td>
+      <p>
+        <h5>Live#11 - Orquestrando Big Data em Ambiente de Nuvem</h5>
+        <p>
+          &ensp;Especialista: XXX, everis <a href="" target="_blank">
+          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
+        </p>
+      </p>
+    </td>
+  </tr>
+  
+   <tr>
+    <td>
+      <p>
+        <h5>Live#12 - Scala: o poder de uma linguagem multiparadigma</h5>
+        <p>
+          &ensp;Especialista: Ivan Falcão - Desenvolvedor Big Data, everis <a href="https://www.linkedin.com/in/ivanpfalcao/" target="_blank">
+          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
+        </p>
+      </p>
+    </td>
+  </tr>
+  
+    <tr>
+    <td>
+      <p>
+        <h5>Live#13 - O que você precisa saber para construir APIs verdadeiramente restfull</h5>
+        <p>
+          &ensp;Especialista: Hugo de Oliveira Alves - Expert Technology Architect, everis <a href="https://www.linkedin.com/in/huguinho/" target="_blank">
+          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
+        </p>
+      </p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <p>
+        <h5>Live#14 - Graduação - habilidades que diferenciam um sênior na everis</h5>
+        <p>
+          &ensp;Especialista: XXX <a href="" target="_blank">
+          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
+        </p>
+      </p>
+    </td>
+  </tr>
 </table>
 ------
 <h6>Navegação entre pastas</h6>
