@@ -29,8 +29,8 @@
 <p>
   <h5>Live#1 - Abertura - Como trabalhar em um ambiente ágil e global</h5>
   <p>
-  Especialista: Ivan Brum - Diretor Data & Analytics, everis <a href="https://www.linkedin.com/in/ivan-brum-960358/" target="_blank"><img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
-  </p>
+    &ensp;Especialista: Ivan Brum - Diretor Data & Analytics, everis <a href="https://www.linkedin.com/in/ivan-brum-960358/" target="_blank"><img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
+  </p> 
 </p>
 
 <p>
