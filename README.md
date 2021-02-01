@@ -30,9 +30,9 @@
   <tr>
     <td>
       <p>
-        <h5>Live#01 - Abertura - Como trabalhar em um ambiente ágil e global</h5>
+        <h5>Live#01 - Abertura - Como trabalhar em um ambiente ágil e global - <a href="" target="_blank" title="Sem anotações ou atividades">🚫</a></h5>
         <p>
-          &ensp;Especialista: Ivan Brum - Diretor Data & Analytics, everis <a href="https://www.linkedin.com/in/ivan-brum-960358/" target="_blank">
+          &ensp;Especialista: Ivan Brum - Diretor Data & Analytics, everis <a href="https://www.linkedin.com/in/ivan-brum-960358/" title="Perfil no LikedIn" target="_blank">
           <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
         </p> 
       </p>
@@ -42,7 +42,7 @@
   <tr>
       <td>
         <p>
-          <h5>Curso#01 - Linux: A introdução ao sistema operacional</h5>
+          <h5>Curso#01 - Linux: A introdução ao sistema operacional - <a href="https://google.com" target="_blank" title="Anotações e/ou atividades">📝</a></h5>
           <p>
             &ensp;Instrutor: Bruno Campos
           </p>
