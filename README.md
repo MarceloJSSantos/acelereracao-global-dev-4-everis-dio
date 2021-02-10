@@ -28,7 +28,7 @@
 ------
 
 1. [Live#02 - Monitoramento de clusters Hadoop de alto nível com HDFS e Yarn](./live_02)
-  Especialista: [Rodrigo Garcia - Big Data Projects Team Lead, everis](https://www.linkedin.com/in/rodsantosg/)
+	- Especialista: [Rodrigo Garcia - Big Data Projects Team Lead, everis](https://www.linkedin.com/in/rodsantosg/)
 
 <table style="width: 100%">
   <tr>
