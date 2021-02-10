@@ -2,7 +2,7 @@
 
 ------
 
-[slides](/slides/live_02_Monitoramento%20de%20clusters%20Hadoop%20de%20alto%20n%C3%ADvel%20com%20HDFS%20e%20Yarn/slides/slides_1901_Monitoramento%20de%20clusters%20Hadoop%20de%20alto%20n%C3%ADvel%20com%20HDFS%20e%20Yarn.pdf)
+[slides](./slides/live_02_Monitoramento%20de%20clusters%20Hadoop%20de%20alto%20n%C3%ADvel%20com%20HDFS%20e%20Yarn/slides/slides_1901_Monitoramento%20de%20clusters%20Hadoop%20de%20alto%20n%C3%ADvel%20com%20HDFS%20e%20Yarn.pdf)
 
  **Anotações gerais**
 
