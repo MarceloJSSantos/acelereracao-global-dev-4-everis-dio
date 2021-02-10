@@ -27,123 +27,30 @@
 
 ------
 
-1. Live#01 - Abertura - Como trabalhar em um ambiente ágil e global
+- Live#01 - Abertura - Como trabalhar em um ambiente ágil e global
 	- Especialista: [Ivan Brum - Diretor Data & Analytics, everis](https://www.linkedin.com/in/ivan-brum-960358/)
-2. Curso#01 - Linux: A introdução ao sistema operacional
+- Curso#01 - Linux: A introdução ao sistema operacional
 	- Instrutor: [Bruno Campos](https://www.linkedin.com/in/brunodecamposdias/)
-3. Curso#02 - Curso#02 - Shell script - Manipulando Arquivos
+- Curso#02 - Curso#02 - Shell script - Manipulando Arquivos
 	- Instrutor: [Daviny Vidal](https://www.linkedin.com/in/davinyvidal/)
-4. [Live#02 - Monitoramento de clusters Hadoop de alto nível com HDFS e Yarn](./live_02)
-5. [Live#03 - Orquestrando ambientes de big data distruibuidos com Zookeeper, Yarn e Sqoop](./live_03)
+- [Live#02 - Monitoramento de clusters Hadoop de alto nível com HDFS e Yarn](./live_02)
+- [Live#03 - Orquestrando ambientes de big data distruibuidos com Zookeeper, Yarn e Sqoop](./live_03)
 	- Especialista: [Rodrigo Garcia - Big Data Projects Team Lead, everis](https://www.linkedin.com/in/rodsantosg/)
-
-  <tr>
-    <td>
-      <p>
-        <h5>Live#04 - Como realizar consultas de maneira simples no ambiente complexo de Big Data com HIVE e Impala</h5>
-        <p>
-          &ensp;Especialista: Vinicius Bueno - Data Engineer and Big Data solutions consultant, everis <a href="https://www.linkedin.com/in/vinicius-m-bueno-br/" target="_blank">
-          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
-        </p>
-      </p>
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <p>
-        <h5>Live#05 - Explorando o poder do NoSQL com Cassandra e Hbase</h5>
-        <p>
-          &ensp;Especialista: Valdir Sevaios - Data & Analytics, everis <a href="https://www.linkedin.com/in/valdir-novo-sevaios-junior-8190a096/" target="_blank">
-          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
-        </p>
-      </p>
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <p>
-        <h5>Live#06 - Intensivo de Python: O mínimo que você precisa saber</h5>
-        <h5>Live#07 - Trabalhando com serviços de mensageria real time com Python e Kafka na prática</h5>
-        <p>
-          &ensp;Especialista: Hugo de Oliveira Alves - Expert Technology Architect, everis <a href="https://www.linkedin.com/in/huguinho/" target="_blank">
-          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
-        </p>
-      </p>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <p>
-        <h5>Live#08 - Processando grandes conjuntos de dados de forma paralela e distribuída com Spark</h5>
-        <p>
-          &ensp;Especialista: Ivan Falcão - Desenvolvedor Big Data, everis <a href="https://www.linkedin.com/in/ivanpfalcao/" target="_blank">
-          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
-        </p>
-      </p>
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <p>
-        <h5>Live#09 - Criando pipelines de dados eficientes - Parte 1</h5>
-        <h5>Live#10 - Criando pipelines de dados eficientes - Parte 2</h5>
-        <p>
-          &ensp;Especialista: Marco Antonio Pereira - Expert Data Architect, everis <a href="https://www.linkedin.com/in/marcoap/" target="_blank">
-          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
-        </p>
-      </p>
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <p>
-        <h5>Live#11 - Orquestrando Big Data em Ambiente de Nuvem</h5>
-        <p>
-          &ensp;Especialista: XXX, everis <a href="" target="_blank">
-          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
-        </p>
-      </p>
-    </td>
-  </tr>
-  
-   <tr>
-    <td>
-      <p>
-        <h5>Live#12 - Scala: o poder de uma linguagem multiparadigma</h5>
-        <p>
-          &ensp;Especialista: Ivan Falcão - Desenvolvedor Big Data, everis <a href="https://www.linkedin.com/in/ivanpfalcao/" target="_blank">
-          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
-        </p>
-      </p>
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <p>
-        <h5>Live#13 - O que você precisa saber para construir APIs verdadeiramente restfull</h5>
-        <p>
-          &ensp;Especialista: Hugo de Oliveira Alves - Expert Technology Architect, everis <a href="https://www.linkedin.com/in/huguinho/" target="_blank">
-          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
-        </p>
-      </p>
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <p>
-        <h5>Live#14 - Graduação - habilidades que diferenciam um sênior na everis</h5>
-        <p>
-          &ensp;Especialista: XXX <a href="" target="_blank">
-          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
-        </p>
-      </p>
-    </td>
-  </tr>
-</table>
+- [Live#04 - Como realizar consultas de maneira simples no ambiente complexo de Big Data com HIVE e Impala](./live_04)
+	- Especialista: [Vinicius Bueno - Data Engineer and Big Data solutions consultant, everis](https://www.linkedin.com/in/vinicius-m-bueno-br/)
+- [Live#05 - Explorando o poder do NoSQL com Cassandra e Hbase](./live_05)
+	- Especialista: [Valdir Sevaios - Data & Analytics, everis](https://www.linkedin.com/in/valdir-novo-sevaios-junior-8190a096/)
+- [Live#06 - Intensivo de Python: O mínimo que você precisa saber](./live_06)
+- [Live#07 - Trabalhando com serviços de mensageria real time com Python e Kafka na prática](./live_07)
+- [Live#13 - O que você precisa saber para construir APIs verdadeiramente restfull](./live_13)
+	- Especialista: [Hugo de Oliveira Alves - Expert Technology Architect, everis](https://www.linkedin.com/in/huguinho/)
+- [Live#08 - Processando grandes conjuntos de dados de forma paralela e distribuída com Spark](./live_08)
+- [Live#12 - Scala: o poder de uma linguagem multiparadigma](./live_12)
+	- Especialista: [Ivan Falcão - Desenvolvedor Big Data, everis](https://www.linkedin.com/in/ivanpfalcao/)
+- [Live#09 - Criando pipelines de dados eficientes - Parte 1 (Spark Streaming e PySpark)](./live_09) (Spark-Stream e PySpark)
+- [LLive#10 - Criando pipelines de dados eficientes - Parte 2 (Spark SQL e PySpark)](./live_10)
+	- Especialista: [Marco Antonio Pereira - Expert Data Architect, everis](https://www.linkedin.com/in/marcoap/)
+- [Live#11 - Orquestrando Big Data em Ambiente de Nuvem](./live_11)
+	- Especialista: [Edmilson Carmo - Big Data Engineer, everis](https://www.linkedin.com/in/edm-carmo/)
+- Live#14 - Graduação - habilidades que diferenciam um sênior na everis
+	- Especialistas: [Evandro Armelin - Data & Analytics Director at everis](https://www.linkedin.com/in/evandroarmelin/) e [William Seles - Tech Recruiter, everis](https://www.linkedin.com/in/william-seles-464351147/)
