@@ -27,58 +27,15 @@
 
 ------
 
-1. [Live#02 - Monitoramento de clusters Hadoop de alto nível com HDFS e Yarn](./live_02)
+1. Live#01 - Abertura - Como trabalhar em um ambiente ágil e global
+	- Especialista: [Ivan Brum - Diretor Data & Analytics, everis](https://www.linkedin.com/in/ivan-brum-960358/)
+2. Curso#01 - Linux: A introdução ao sistema operacional
+	- Instrutor: [Bruno Campos](...)
+3. Curso#02 - Curso#02 - Shell script - Manipulando Arquivos
+	- Instrutor: [Daviny Vidal](...)
+4. [Live#02 - Monitoramento de clusters Hadoop de alto nível com HDFS e Yarn](./live_02)
+5. [Live#03 - Orquestrando ambientes de big data distruibuidos com Zookeeper, Yarn e Sqoop](./live_03)
 	- Especialista: [Rodrigo Garcia - Big Data Projects Team Lead, everis](https://www.linkedin.com/in/rodsantosg/)
-
-<table style="width: 100%">
-  <tr>
-    <td>
-      <p>
-        <h5 id="live1">Live#01 - Abertura - Como trabalhar em um ambiente ágil e global - <a href="#live1" target="_blank" title="Sem anotações ou atividades">🚫</a></h5>
-        <p>
-          &ensp;Especialista: Ivan Brum - Diretor Data & Analytics, everis <a href="https://www.linkedin.com/in/ivan-brum-960358/" title="Perfil no LikedIn" target="_blank">
-          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
-        </p> 
-      </p>
-    </td>
-  </tr>
-
-  <tr>
-      <td>
-        <p>
-          <h5>Curso#01 - Linux: A introdução ao sistema operacional - 
-            <a href="https://google.com" target="_blank" title="Anotações e/ou atividades">📝</a></h5>
-          <p>
-            &ensp;Instrutor: Bruno Campos
-          </p>
-        </p>
-      </td>
-    </tr>
-  </tr>
-
-  <tr>
-      <td>
-        <p>
-          <h5>Curso#02 - Shell script - Manipulando Arquivos - <a href="https://google.com" target="_blank" title="Anotações e/ou atividades">📝</a></h5>
-          <p>
-            &ensp;Instrutora: Daviny Vidal
-          </p>
-        </p>
-      </td>
-    </tr>
-
-  <tr>
-    <td>
-      <p>
-        <h5>Live#02 - Monitoramento de clusters Hadoop de alto nível com HDFS e Yarn</h5>
-        <h5>Live#03 - Orquestrando ambientes de big data distruibuidos com Zookeeper, Yarn e Sqoop</h5>
-        <p>
-          &ensp;Especialista: Rodrigo Garcia - Big Data Projects Team Lead, everis <a href="https://www.linkedin.com/in/rodsantosg/" target="_blank">
-          <img src="/img/logo_likedin.jpg"  alt="logo_likedin" width="20" height="20" /></a>
-        </p>
-      </p>
-    </td>
-  </tr>
 
   <tr>
     <td>
