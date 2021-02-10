@@ -242,7 +242,7 @@ sem sucesso, então retirei as linhas abaixo do arquivo /etc/hadoop/conf/yarn-si
 ```xml
 <property>
 	<description>Where to aggregate logs to.</description>
-    <name>yarn.nodemanager.remote-app-log-dir</name>
+	<name>yarn.nodemanager.remote-app-log-dir</name>
 	<value>hdfs://bigdata-srv:8020/bigdata-srv:8020/bigdata-srv:8020/bigdata-srv:8020/var/log/hadoop$
 </property>
 ```
