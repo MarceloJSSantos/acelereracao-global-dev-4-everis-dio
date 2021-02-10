@@ -64,8 +64,8 @@ sqoop import \
 --null-string '\\N'\
 --null-non-string '\\N'
 --incremental append ou lastmodified # Funcionalidade para incrementar os dados
-			--check-column id ou last_update_date # Identifica a coluna que será verificada para incrementar novos dados
-			--last-value 1 ou "2013-05-22 01:01:01" # Para especificar o último valor importado no Hadoop
+--check-column id ou last_update_date # Identifica a coluna que será verificada para incrementar novos dados
+--last-value 1 ou "2013-05-22 01:01:01" # Para especificar o último valor importado no Hadoop
 			
 # Exemplo 2 - Import da tabela accounts
 sqoop import --table accounts \
