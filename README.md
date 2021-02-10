@@ -26,6 +26,10 @@
 </table>
 
 ------
+
+1. [Live#02 - Monitoramento de clusters Hadoop de alto nível com HDFS e Yarn](./live_02)
+  Especialista: [Rodrigo Garcia - Big Data Projects Team Lead, everis](https://www.linkedin.com/in/rodsantosg/)
+
 <table style="width: 100%">
   <tr>
     <td>
@@ -186,26 +190,3 @@
     </td>
   </tr>
 </table>
-------
-<h6>Navegação entre pastas</h6>
-
-```shell
-# sintaxe: $ cd <caminho da pasta>
-#Exemplos
-
-#(p/ pasta acima da atual)
-cd ..
-
-#(p/ o diretório raiz do SO)
-cd /
-
-#(p/ o diretório pessoal)
-cd ~
-
-#(p/ o específico)
-cd /home/arquivos
-```
-
-
- 
-
