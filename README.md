@@ -30,9 +30,9 @@
 1. Live#01 - Abertura - Como trabalhar em um ambiente ágil e global
 	- Especialista: [Ivan Brum - Diretor Data & Analytics, everis](https://www.linkedin.com/in/ivan-brum-960358/)
 2. Curso#01 - Linux: A introdução ao sistema operacional
-	- Instrutor: [Bruno Campos](...)
+	- Instrutor: [Bruno Campos](https://www.linkedin.com/in/brunodecamposdias/)
 3. Curso#02 - Curso#02 - Shell script - Manipulando Arquivos
-	- Instrutor: [Daviny Vidal](...)
+	- Instrutor: [Daviny Vidal](https://www.linkedin.com/in/davinyvidal/)
 4. [Live#02 - Monitoramento de clusters Hadoop de alto nível com HDFS e Yarn](./live_02)
 5. [Live#03 - Orquestrando ambientes de big data distruibuidos com Zookeeper, Yarn e Sqoop](./live_03)
 	- Especialista: [Rodrigo Garcia - Big Data Projects Team Lead, everis](https://www.linkedin.com/in/rodsantosg/)
