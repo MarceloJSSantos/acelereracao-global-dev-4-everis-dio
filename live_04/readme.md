@@ -349,14 +349,13 @@ hive -S -e "select count(*) from teste01.localidade;"
 Impala
 	- usa os mesmos BD que o Hive (usa o mesmo espaço no HDFS)
 	- comandos são os mesmos que o Hive.
-	
 	- Algumas vezes é preciso atualizar o Impala para acessar algumas tabelas recem criadas no Hive.
-		
-		```sql
-		# impala>
-		INVALIDATE METADATA tb_ext_localidade;
-		```
-	
+
+```sql
+# impala>
+INVALIDATE METADATA tb_ext_localidade;
+```
+
 - permite o uso de joins, desde que haja memória para isso
 
 ```sql
