@@ -47,7 +47,7 @@
 - [Live#08 - Processando grandes conjuntos de dados de forma paralela e distribuída com Spark](./live_08)
 - [Live#12 - Scala: o poder de uma linguagem multiparadigma](./live_12)
 	- Especialista: [Ivan Falcão - Desenvolvedor Big Data, everis](https://www.linkedin.com/in/ivanpfalcao/)
-- [Live#09 - Criando pipelines de dados eficientes - Parte 1 (Spark Streaming e PySpark)](./live_09) (Spark-Stream e PySpark)
+- [Live#09 - Criando pipelines de dados eficientes - Parte 1 (Spark Streaming e PySpark)](./live_09)
 - [LLive#10 - Criando pipelines de dados eficientes - Parte 2 (Spark SQL e PySpark)](./live_10)
 	- Especialista: [Marco Antonio Pereira - Expert Data Architect, everis](https://www.linkedin.com/in/marcoap/)
 - [Live#11 - Orquestrando Big Data em Ambiente de Nuvem](./live_11)
