@@ -16,7 +16,7 @@
   <tr>
     <td>
       <p align="justify">
-        Repositório criado para armazenar anotações e atividades desempenhadas no treinamento na plataforma da <a href="https://digitalinnovation.one/" target="_blank">Digital Inovattion One (DIO)</a> para o Processo seletivo de Engenheiros de Dados pela empresa <a href="https://www.everis.com/brazil" target="_blank">Everis</a>.
+        Repositório criado para armazenar anotações e atividades desempenhadas no treinamento na plataforma da <a href="https://digitalinnovation.one/" target="_blank">Digital Inovattion One (DIO)</a> para o Processo seletivo de Engenheiros de Dados pela empresa <a href="https://www.everis.com/brazil" target="_blank">everis</a>.
       </p>
       <p align="justify">
         Este tem tão somente o intuito de ser uma visão particular do autor e servir como uma forma de facilitar o acesso a todo conhecimento adquirido na atividade. Não é intenção do autor abordar de forma completa o conteúdo abordado nem tão pouco substituir o todo ou em parte o material original disponibilizado no <a href="https://web.digitalinnovation.one/acceleration/aceleracao-global-dev-4-everis?tab=path" target="_blank">site</a> do treinamento.
@@ -53,4 +53,4 @@
 - [Live#11 - Orquestrando Big Data em Ambiente de Nuvem](./live_11)
 	- Especialista: [Edmilson Carmo - Big Data Engineer, everis](https://www.linkedin.com/in/edm-carmo/)
 - Live#14 - Graduação - habilidades que diferenciam um sênior na everis
-	- Especialistas: [Evandro Armelin - Data & Analytics Director at everis](https://www.linkedin.com/in/evandroarmelin/) e [William Seles - Tech Recruiter, everis](https://www.linkedin.com/in/william-seles-464351147/)
+	- Especialistas: [Evandro Armelin - Data & Analytics Director, everis](https://www.linkedin.com/in/evandroarmelin/) e [William Seles - Tech Recruiter, everis](https://www.linkedin.com/in/william-seles-464351147/)
