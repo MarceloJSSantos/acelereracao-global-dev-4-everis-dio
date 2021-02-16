@@ -501,7 +501,7 @@ hdfs dfs -cat /test/salaries_com_rowkey.csv|wc -l
 ```
 
 5. Porque o primeiro arquivos carregou menos registros?
-  Resposta: Porque ele sobrescreveu todas as linhas com a mesma ROW_KEY, ficando apenas o value da última carregada
+    Resposta: Porque ele sobrescreveu todas as linhas com a mesma ROW_KEY, ficando apenas o value da última carregada
 
   
 
@@ -564,6 +564,22 @@ TBLPROPERTIES("hbase.table.name"="ex_carga_massiva:salaries_concatenado", "hbase
 ```
 
 2. Consultar os empregados com o maior salário em cada ano.
-   
+
+```shell
+# hive>
+select substr(from_date, 0, 4) as ano, 
+max(struct(salary, emp_no)).col1 as salary,
+max(struct(salary, emp_no)).col2 as emp_no
+from salaries
+group by substr(from_date, 0, 4);
+```
 
 3. Consultar o quanto foi gasto em salários por ano.
+
+```shell
+# hive>
+select substr(from_date, 0, 4) as ano, sum(salary) as soma_salary_ano
+from salaries
+group by substr(from_date, 0, 4);
+```
+
