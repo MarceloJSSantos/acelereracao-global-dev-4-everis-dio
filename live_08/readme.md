@@ -4,6 +4,324 @@
 
 [slides](./slides/slides_live_08.pdf)
 
+arquivos:
+
+- [avengers.csv](./arquivos/avengers.csv)
+
+- [FL_insurance_sample.csv](./arquivos/FL_insurance_sample.csv)
+
+  
+
+INSTALAÇÃO
+
+1) Baixar em http://spark.apache.org/downloads.html
+(sugestão de uso da versão 2.4.7 c/ a pre-build do Hadoop 2.7)
+
+2) Descompactar o arquivo baixado (tar -zxvf spark-2.4.7-bin-hadoop2.7.tgz);
+
+3) mover para o local desejado
+
+4) configurar a variável de ambiente SPARK_HOME para pasta onde foi descopactado o Spark para facilitar, configurar no PATH do sistema a pasta bin, dentro do diretório Spark adicionar ao arquivo /etc/bash.bashrc (Debian)  ou /etc/bashrc (RHEL)
+
+```
+export SPARK_HOME="/opt/spark-2.3.1-bin-hadoop2.7"
+PATH="$PATH:$SPARK_HOME/bin"
+export PYSPARK_PYTOHN="python3"
+```
+
+- verificando os arquivos do Spark
+```shell
+# leva até a pasta do Spark
+cd $SPARK_HOME
+
+# lista os arquivos e pasta
+ls -l
+# ou nome da pasta de definição livre (onde descopactamos o arquivo baixado)
+# no caso está em .../opt/spark-2.4.7-bin-hadoop2.6.tgz
+cd ..
+ls -l
+```
 
 
-Em Construção
+
+**Formas de trabalhar c/ Spark**
+
+- via shell (de forma interativa - linha de comando)
+  - spark-shell (Scala)
+  - pyspark-shell (Python)
+  - sql-shell (SQL)
+  - R-shell (R) (só em versões mais moderanas)
+  - spark-submit (de forma interativa - arquivo bath)
+
+- via notebooks
+  - Jupyter Notebooks (Python)
+  - Zeppelin Notebooks (Python e Scala)
+  - Google Colab (Python)
+  - Databriks Notebooks (Scala, Python, Java, SQL, R)
+
+
+
+PRÁTICA
+
+- acessando
+
+```shell
+# Ao acessar via spark-shell omesmo cria automaticamente o SparkContext(sc) e o SparkSession(spark)
+spark-shell
+# ao subir o spark-shell ele nos traz
+# Spark context Web UI available at http://bigdata-srv:4042 (interface web)
+# Spark context available as 'sc' (master = local[*], app id = local-1612060902210). (id do job)
+# Spark session available as 'spark'. (nome do spark session)
+```
+
+- baixar o arquivo "https://raw.githubusercontent.com/fivethirtyeight/data/master/avengers/avengers.csv" e colocar na pasta "/home/everis/arquivos/"
+- podemos baixar direto para VM usando wget, dentro pasta que você quer baixar
+
+```sh
+wget https://raw.githubusercontent.com/fivethirtyeight/data/master/avengers/avengers.csv
+```
+
+```scala
+// lê o arquivo e coloca em uma variável no spark
+// lê um arquivo do formato CSV, com delimitador "," e com a primeira linha com cabeçalho 
+val insurance = spark.read.format("csv").option("sep", ",")
+	.option("header", "true")
+	.load("file:///home/everis/arquivos/avengers.csv")
+
+// mostra o conteúdo do arquivo
+insurance.show()
+
+// mostra conteúdo do arquivo, só 5 primeiros registros e não costa os dados dascolunas
+insurance.show(5, false)
+
+// mostra conteúdo do arquivo, só 5 primeiros registros de colunas específicas
+insurance.select("URL", "Name/Alias").show(5, false)
+
+// cria um novo ds conforme a composição
+val ds2 = insurance.select("URL", "Name/Alias")
+```
+
+Pyspark shell
+- Shell interativo usando a linguagem Python
+- Assim como o spark-shell, o pyspark tambem cria o SparkContext(sc) e o SparkSession(spark);
+- nota: não dá apara usar as setas para voltar os comandos ou apagar
+
+
+
+Melhor documentação para o spark é a própria página do Spark.
+http://spark.apache.org/
+
+- Documentation -> escolha a versão -> Programming Guides
+
+
+
+```python
+# lê um arquivo do formato CSV, com delimitador "," e com a primeira linha com cabeçalho 
+insurance = spark.read.format("csv").option("sep", ",")
+	.option("header", "true").load("file:///home/everis/arquivos/avengers.csv")
+
+# mostra o conteúdo do arquivo
+insurance.show()
+
+# mostra conteúdo do arquivo, só 5 primeiros registros de colunas específicas
+insurance.select("URL", "Name/Alias", "Gender").show(5)
+
+# cria um novo ds conforme a composição
+ds2 = insurance.select("URL", "Name/Alias","Gender")
+```
+
+
+
+spark-sql
+- Shell interativo usando a linguagem SQL
+- diferente dos anteiores, não cria o SparkContext(sc) e o SparkSession(spark);
+
+```SPARQL
+# acessa um arquivo em disco e aplica o SQL diretamente
+# tem que usar '`' e não '''
+SELECT * FROM csv.`file:///home/everis/arquivos/avengers.csv`
+```
+
+
+
+Declarando o Spark Context em Scala
+necessário
+
+- p/ uso em notebooks Google Colab
+- p/ desenvolvimento de programas ser executado em spark-submit
+- Em Shell ou Databriks ficará implícito
+
+```scala
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
+val conf = new SparkConf().setName("meu aplicativo spark")
+val sc = new SparkContext(conf)
+```
+
+
+
+SparkSQL
+- modulo do Spark que fica acima do módulo core.
+- trabalha exclusivamente c/ objetos Dataframes e Datasets (abstrações das tabelas Spark(RDDs))
+
+
+
+Dataframes vs. Datasets
+
+- Dataframes: estrutura não tipado
+- Datasets: estrutura com os dados tipados
+
+Dataframes tem uma linguagem própria para trabalhar c/ eles, mas podemos fazer uso de SQL (ANSI 2003)
+O Spark nos permite trabalhar c/ diversas fontes de dados:
+
+- arquivos no HDFS;
+- tabelas HIVE;
+- tabelas HBase;
+- tabelas de BD relacionais;
+
+Facilitando assim o cruzamentos de dados de diversas fontes em um mesmo "lugar"
+
+Spark Session é o ponto central do módulo de dataframes
+- internamente o Spark Session tem um Spark Context associado
+- da versão 2 em diante o Spark Session unificou o SQLContext e HiveContext
+- o Spark Session aceita várias configurações
+
+De maneira geral temos
+Spark context = sc
+Spark Session = spark
+
+```scala
+// cria um spark session (versão >2)em Scala
+import org.apache.sql.SparkSession
+
+val spark = SparkSession
+	.builder()
+	.appName("Spark SQL")
+	.config("<configuração>","<valor da configuração>")
+	.getOrCreate()
+
+// Podemos ler diversos formato de arquivos
+// lê um arquivo json
+val dfJson = spark.read.json("file://.../arq.json")
+
+// lê um arquivo parquet
+val dfParquet = spark.read.format("parquet").load("hdfs:/.../arq.parquet")
+
+// lê arquivo csv
+val peopleDFcsv = spark.read.format("csv").option("sep",",").
+	option("header","true").load("file://.../arq.csv")
+
+// conectando c/ fontes de dados JDBC
+// muitas vezes devemos baixar o driver e colocar junta da aplicação desenvolvida
+val jdbcDF = spark.read
+	.format("jdbc")
+	.option("url","jdbc:postgressql:dbserver")
+	.option("dbtable", "<nome do esquema>.<nome da tabela>")
+	.option("user","<usuário>")
+	.option("password", "<senha>")
+	.option("driver", "com.driver.MyDriver")
+	.load()
+```
+
+
+
+Operações de Dataframes
+
+```scala
+// carrega o arquivo
+val df = spark.read.format("csv").option("sep", ",")
+	.option("header", "true").load("file:///home/everis/arquivos/avengers.csv")
+
+// exibe a estrutura do dataframe (nome das colunas)
+df.printSchema()
+
+// traz quantidade de registros específicados s/ cortar os dados
+df.show(5,false)
+
+// traz os registros das colunas específicadas
+df.select("Name/Alias","Honorary","Death1").show(false)
+
+// faz operações com os campos
+//nota: todas as colunas, mesmo as que não terão operação precisa ter "$"
+df.select($"Name/Alias",$"Appearances",$"Appearances"*3).show(false)
+
+// filtragem
+df.select("Name/Alias","Honorary","Death1","Appearances").filter($"Appearances">=1000).show(false)
+
+// contar nr. de registros
+df.count()
+
+// agrupa e contar
+df.groupBy("Gender").count().show()
+
+// renomeia o nome de coluna e agrupa e contando
+// withColumn("<novo nome>", col("<nome antigo>"))
+df.withColumn("Gênero",col("Gender")).groupBy("Gênero").count().show()
+
+// agregações média, soma, min e max
+df.agg(avg("Year")).show()
+df.agg(sum("Year")).show()
+df.agg(min("Year")).show()
+df.agg(max("Year")).show()
+```
+
+
+
+**Exercício**
+Baixar o arquivo em "https://raw.githubusercontent.com/shankarmsy/practice_Pandas/master/FL_insurance_sample.csv" e obter a média do campo "eq_site_limit", agrupado por "construction"
+
+```shell
+# baixando o arquivo
+wget https://raw.githubusercontent.com/shankarmsy/practice_Pandas/master/FL_insurance_sample.csv
+```
+
+```scala
+// carregando o arquivo no pandas
+val dfEx = spark.read.format("csv").option("sep", ",")
+	.option("header", "true")
+	.load("file:///home/everis/arquivos/FL_insurance_sample.csv")
+
+// verifica os nomes das colunas
+dfEx.printSchema()
+
+// agrupa e calcula a média
+dfEx.groupBy("construction").agg(avg("eq_site_limit")).show()
+```
+
+```
++-------------------+------------------+
+|       construction|avg(eq_site_limit)|
++-------------------+------------------+
+|Reinforced Concrete|4015452.1939953812|
+|               Wood|23953.954232889966|
+|        Steel Frame|5.97785294117647E7|
+|            Masonry|193878.50877173975|
+| Reinforced Masonry|  712295.683029586|
++-------------------+------------------+
+```
+
+
+
+Trabalhando com SQL no spark
+
+```scala
+// cadastramos o nosso dataframe como uma tempview
+// cria uma tempview de um dataframe
+df.createTempView("seguro")
+
+// cria ou recria se já existir uma tempview de um dataframe
+df.createOrReplaceTempView("seguro")
+
+// cria e/ou recria uma tempview em ambiente compartilhado
+df.createGlobalTempView("seguro")
+df.createGlobalOrReplaceTempView("seguro")
+
+// então podemos realizar operações de SQLContext
+spark.sql("SELECT * FROM seguro").show()
+spark.sql("SELECT * FROM global_temp.seguro").show()
+spark.sql("SELECT county, point_latitude, point_longitude FROM seguro LIMIT 10").show()
+```
+
+
+
+Aguardando os slides´para continuar a fazer diversas coisas que não foram abordadas na live
