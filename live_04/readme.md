@@ -4,7 +4,15 @@
 
 [slides](./slides/slides_live_04.pdf)
 
-Arquivos: [base_localidade.csv](./arquivos/base_localidade.csv), [employee.txt](./arquivos/employee.txt) e [restart_all_service_hive.sh](./arquivos/restart_all_service_hive.sh) 
+Arquivos: 
+
+- [base_localidade.csv](./arquivos/base_localidade.csv)
+
+- [employee.txt](./arquivos/employee.txt)
+
+- [restart_all_service_hive.sh](./arquivos/restart_all_service_hive.sh) 
+
+  
 
 **Anotações gerais**
 
@@ -347,7 +355,8 @@ hive -S -e "select count(*) from teste01.localidade;"
 
 
 Impala
-- usa os mesmos BD que o Hive (usa o mesmo espaço no HDFS)
+
+	- usa os mesmos BD que o Hive (usa o mesmo espaço no HDFS)
 	- comandos são os mesmos que o Hive.
 	- Algumas vezes é preciso atualizar o Impala para acessar algumas tabelas recem criadas no Hive.
 
