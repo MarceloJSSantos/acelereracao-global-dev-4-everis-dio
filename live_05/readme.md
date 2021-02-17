@@ -4,7 +4,11 @@
 
 [slides](./slides/slides_live_05.pdf)
 
-Arquivos: [employees.csv](./arquivos/base_localidade.csv), [salaries.zip](./arquivos/salaries.zip) e [salaries_com_rowkey.zip](./arquivos/salaries_com_rowkey.zip) 
+Arquivos: 
+
+- [employees.csv](./arquivos/base_localidade.csv)
+- [salaries.zip](./arquivos/salaries.zip)
+- [salaries_com_rowkey.zip](./arquivos/salaries_com_rowkey.zip) 
 
 
 
