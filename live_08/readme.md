@@ -132,6 +132,15 @@ ds2 = insurance.select("URL", "Name/Alias","Gender")
 
 
 
+RDDs (Resilient Distributed Dataset)
+- é a principal abstração do Spark
+- é uma coleção de elementos particionados entre os diversos nós de um cluster;
+- Algumas características principais:
+	- é resiliente a falhas, caso haja algum erro durante o processo, ele é capaz de se recuperar e continuar a atividade;
+	- são estruturados para serem naturalmente distribuídos, sendo capazes de existir entre diversos nós de um cluster;
+	- são imutáveis.
+		- Um RDD gera outro RDD, jamais ele poderá ser modificado. Seu conteúdo poderá ser transformado, resultando em outro RDD.
+
 spark-sql
 - Shell interativo usando a linguagem SQL
 - diferente dos anteiores, não cria o SparkContext(sc) e o SparkSession(spark);
@@ -307,20 +316,76 @@ Trabalhando com SQL no spark
 ```scala
 // cadastramos o nosso dataframe como uma tempview
 // cria uma tempview de um dataframe
-df.createTempView("seguro")
+dfEx.createTempView("seguro")
 
 // cria ou recria se já existir uma tempview de um dataframe
-df.createOrReplaceTempView("seguro")
+dfEx.createOrReplaceTempView("seguro")
 
 // cria e/ou recria uma tempview em ambiente compartilhado
-df.createGlobalTempView("seguro")
-df.createGlobalOrReplaceTempView("seguro")
+dfEx.createGlobalTempView("seguro")
+dfEx.createGlobalOrReplaceTempView("seguro")
 
 // então podemos realizar operações de SQLContext
 spark.sql("SELECT * FROM seguro").show()
 spark.sql("SELECT * FROM global_temp.seguro").show()
 spark.sql("SELECT county, point_latitude, point_longitude FROM seguro LIMIT 10").show()
+
+// cria um novo dataframe do retono da query via sparkSQL
+val newDF = spark.sql("SELECT * FROM seguro")
+
+// exibe os dados do dataframe
+newDF.show()
+
+// carregando um arquivo diretamente via SQL
+spark.sql("SELECT * FROM csv.`file:///home/everis/arquivos/FL_insurance_sample.csv`").show()
+
+// grava os dados do dataframe em arquivo no SO
+dfEx.write.format("csv")
+.option("sep", ",")
+.option("header", "true")
+.save("file:///home/everis/arquivos/exportados")
+
+// grava os dados do dataframe em arquivo no SO
+// usando save mode
+// - Append: caso já exista o dataframe, adiciona os dados ao final ("append")
+// - ErrorIfExists: caso já exista o dataframe, lança uma exceção ("errorifexists")
+// - Ignore: caso já exista o dataframe, não altera os dados do anterior ("ignore")
+// - Overwrite: caso já exista o dataframe, substitui os dados do anterior ("overwrite")
+dfEx.write.format("csv")
+.option("sep", ",")
+.option("header", "true")
+.mode("errorifexists")
+.save("file:///home/everis/arquivos/exportados")
+
+dfEx.coalesce(1).write.format("csv")
+.option("sep", ";")
+.option("header", "true")
+.save("file:///home/everis/arquivos/exportados")
+
+// valores particionados?
+dfEx.write.partitionBy("county").format("csv")
+.option("sep", ",")
+.option("header", "true")
+.save("file:///home/everis/arquivos/exportados/particionado")
+
+// entender o que faz esta instrução
+dfEx.write.bucketBy(42,"county").sortBy("statecode").saveAsTable("people_bucketed")
+
+// foi preciso copiar o driver do MySQL na pasta SPARK_HOME/jars
+// após reiniciar a sessão do Spark p/ funcionar
+cd $SPARK_HOME
+wget -q "http://search.maven.org/remotecontent?filepath=mysql/mysql-connector-java/5.1.32/mysql-connector-java-5.1.32.jar" -O mysql-connector-java.jar
+
+// gravar em BD
+dfEx.write.format("jdbc")
+.option("url", "jdbc:mysql://localhost/trainning")
+.option("dbtable","trainning.tab_seguro_spark_2")
+.option("user", "root")
+.option("password","Everis@2021")
+.save
 ```
+
+
 
 
 
