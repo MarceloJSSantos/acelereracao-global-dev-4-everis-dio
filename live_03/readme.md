@@ -4,7 +4,15 @@
 
 [slides](./slides/slides_live_03.pdf)
 
-Arquivos: [install_sqoop.sh](./arquivos/install_sqoop.sh), [pokemon.sql](./arquivos/pokemon.sql) e [sqoop_import.sh](./arquivos/sqoop_import.sh)
+Arquivos: 
+
+- [install_sqoop.sh](./arquivos/install_sqoop.sh)
+
+- [pokemon.sql](./arquivos/pokemon.sql)
+
+- [sqoop_import.sh](./arquivos/sqoop_import.sh)
+
+  
 
  **Anotações gerais**
 
