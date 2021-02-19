@@ -32,7 +32,7 @@ export PYSPARK_PYTOHN="python3"
 - verificando os arquivos do Spark
 ```shell
 # leva até a pasta do Spark
-cd $SPARK_HOME
+cd $SPARK_HOME/jars
 
 # lista os arquivos e pasta
 ls -l
@@ -387,6 +387,159 @@ dfEx.write.format("jdbc")
 
 
 
+UDFs (User Defined Functions)
+https://spark.apache.org/docs/latest/sql-ref-functions-udf-scalar.html
+
+São funções que são definidas pelo usuário e podem ser utilizadas para realizar transformações nos dados:
+
+```scala
+// registra uma UDF
+spark.udf.register("minhaUDF", (s: String) => s.length())
+// cria uma view para uso c/ SQL
+dfEx.createTempView("seguro")
+// usando a UDF criada
+spark.sql("SELECT DISTINCT minhaUDF(county) as `nr letras`, county FROM seguro").show()
+```
 
 
-Aguardando os slides´para continuar a fazer diversas coisas que não foram abordadas na live
+
+UDAFs (User Defined Aggregation Functions)
+https://spark.apache.org/docs/latest/sql-ref-functions-udf-aggregate.html
+
+são semelhantes as UDFs , porém são responsáveis por realizar funções de agregação, sendo do tipo:
+- Untyped
+- Typed
+
+A partir da versão 2.3 do Spark foram inseridas as Pandas UDFs  
+	- São UDFs otimizadas para python , utilizando as capacidades do Apache Arrow;
+	- Elas melhoram muito a velocidade de execução de UDFs em python
+
+----
+
+**NÃO TESTADO**
+
+```python
+Utilizando Pandas UDFs: (não consegui rodar no pyspark-shell)
+# lê um arquivo do formato CSV, com delimitador "," e com a primeira linha com cabeçalho 
+df = spark.read.format("csv").option("sep", ",").option("header", "true").load("file:///home/everis/arquivos/FL_insurance_sample.csv")
+
+from pyspark.sql.functions import col, pandas_udf
+from pyspark.sql.types import LongType
+def multiply_func(a,b):
+    return a * b
+multiply = pandas_udf(multiply_func, returnType=LongType())
+df.select(multiply(col("policyID"), col("policyID"))).show()
+```
+
+-------
+
+Importante!
+- UDFs , UDAFs e Pandas UDFs são naturalmente mais pesadas e impactarão na performance do seu processo;
+- Sempre que possível execute operações diretamente com comandos de Dataframe ou código SQL nativo:
+	https://spark.apache.org/docs/2.4.7/api/sql/index.html
+
+
+
+Spark e Hive
+
+- Podemos acessar diretamente o Hive via spark
+
+----
+
+**NÃO TESTADO**
+
+```scala
+import java.io.File
+import org.apache.spark.sql.{Row, SaveMode, SparkSession}
+import spark.implicits._
+import spark.sql
+
+val warehouseLocation = new File("spark warehouse").getAbsolutePath
+
+val spark = SparkSession
+.builder()
+.appName("Spark Hive")
+.config("spark.sql.warehouse.dir", warehouseLocation)
+.enableHiveSupport()
+.getOrCreate()
+
+spark.sql("CREATE TABLE IF NOT EXISTS src(key INT, value STRING) USING hive")
+spark.sql("LOAD DATA LOCAL INPATH 'file:///home/everis/arquivos/kv1.txt' INTO TABLE src")
+
+spark.sql("SELECT * FROM src").show()
+
+val df = spark.table("src")
+df.write.mode(SaveMode.Overwrite).saveAsTable("hive_records")
+```
+
+----
+
+
+
+Persist e Cache
+Pontos importantes para melhorar a performance dos nossos programas:
+- Em geral o Spark pode precisar refazer uma determinada transformação várias vezes a cada ação. Para otimizar nossos programas podemos usar o conceito de persist (ou cache), comando que armazenará os dados na memória para ser reutilizado;
+- Pode melhorar muito a performance do seu projeto, mas deve ser usada com parcimônia, dependendo dos recursos do cluster;
+
+Exemplo
+
+----
+
+**NÃO TESTADO**
+
+```scala
+val dfJson = spark.read.json ("file:///examples/src/main/resources/people.json")
+
+dataframe.persist(StorageLevel.MEMORY_AND_DISK)
+dataframe.unpersist()
+dataframe.cache()
+```
+
+----
+
+Possíveis "storage levels" para persistência
+
+- MEMORY_ONLY
+  Armazene RDD como objetos Java desserializados na JVM. Se o RDD não couber na memória, algumas partições não serão armazenadas em cache e serão recalculadas rapidamente cada vez que forem necessárias.
+  Este é o nível padrão.
+
+- MEMORY_AND_DISK
+  Armazene RDD como objetos Java desserializados na JVM. Se o RDD não couber na memória, armazene as partições que não couberem no disco e leia-as quando for necessário.
+
+- MEMORY_ONLY_SER(Java e Scala)
+  Armazene RDD como objetos Java serializados (uma matriz de byte por partição). Isso geralmente é mais eficiente em termos de espaço do que objetos desserializados, especialmente ao usar um serializador rápido, mas mais intensivo da CPU para leitura.
+
+- MEMORY_AND_DISK_SER (Java and Scala)
+  Semelhante a MEMORY_ONLY_SER, mas transfere as partições que não cabem na memória para o disco, em vez de recomputá-las rapidamente cada vez que são necessárias.
+
+- DISK_ONLY
+  Armazene as partições RDD apenas no disco.
+
+- MEMORY_ONLY_2, MEMORY_AND_DISK_2, etc.
+  Igual aos níveis acima, mas replique cada partição em dois nós do cluster.
+
+- OFF_HEAP (experimental)
+  Semelhante a MEMORY_ONLY_SER, mas armazena os dados na memória fora do heap. Isso requer que a memória fora do heap esteja ativada.
+
+
+
+Spark Submit
+
+- É a maneira mais comum de executarmos um sistema em Spark
+- Permite a configuração de diversos parâmetros do Spark
+- Pode trabalhar tanto com códigos python (py , whl , .zip) quanto com pacotes . jar (e mais recentemente .R)
+
+```shell
+spark submit \
+-- class <main-class> \
+-- master <master-url> \
+-- deploy-mode <deploy-mode> \
+-- conf <key>=<value> \
+... # outras opções
+<application-jar> \
+[application arguments]
+```
+
+
+
+ (continuar slide 67)
