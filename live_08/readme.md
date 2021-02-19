@@ -388,6 +388,7 @@ dfEx.write.format("jdbc")
 
 
 UDFs (User Defined Functions)
+
 https://spark.apache.org/docs/latest/sql-ref-functions-udf-scalar.html
 
 São funções que são definidas pelo usuário e podem ser utilizadas para realizar transformações nos dados:
@@ -404,6 +405,7 @@ spark.sql("SELECT DISTINCT minhaUDF(county) as `nr letras`, county FROM seguro")
 
 
 UDAFs (User Defined Aggregation Functions)
+
 https://spark.apache.org/docs/latest/sql-ref-functions-udf-aggregate.html
 
 são semelhantes as UDFs , porém são responsáveis por realizar funções de agregação, sendo do tipo:
@@ -435,8 +437,7 @@ df.select(multiply(col("policyID"), col("policyID"))).show()
 
 Importante!
 - UDFs , UDAFs e Pandas UDFs são naturalmente mais pesadas e impactarão na performance do seu processo;
-- Sempre que possível execute operações diretamente com comandos de Dataframe ou código SQL nativo:
-	https://spark.apache.org/docs/2.4.7/api/sql/index.html
+- Sempre que possível execute operações diretamente com comandos de Dataframe ou código SQL nativo: https://spark.apache.org/docs/2.4.7/api/sql/index.html
 
 
 
@@ -477,7 +478,9 @@ df.write.mode(SaveMode.Overwrite).saveAsTable("hive_records")
 
 
 Persist e Cache
+
 Pontos importantes para melhorar a performance dos nossos programas:
+
 - Em geral o Spark pode precisar refazer uma determinada transformação várias vezes a cada ação. Para otimizar nossos programas podemos usar o conceito de persist (ou cache), comando que armazenará os dados na memória para ser reutilizado;
 - Pode melhorar muito a performance do seu projeto, mas deve ser usada com parcimônia, dependendo dos recursos do cluster;
 
