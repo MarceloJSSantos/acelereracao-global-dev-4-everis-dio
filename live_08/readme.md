@@ -531,18 +531,121 @@ Spark Submit
 - É a maneira mais comum de executarmos um sistema em Spark
 - Permite a configuração de diversos parâmetros do Spark
 - Pode trabalhar tanto com códigos python (py , whl , .zip) quanto com pacotes . jar (e mais recentemente .R)
+- Lista com todas as configurações do spark submit :  https://spark.apache.org/docs/latest/configuration.html
 
 ```shell
-spark submit \
--- class <main-class> \
--- master <master-url> \
--- deploy-mode <deploy-mode> \
--- conf <key>=<value> \
+./bin/spark submit \
+--class <main-class> \
+--master <master-url> \
+--deploy-mode <deploy-mode> \
+--conf <key>=<value> \
 ... # outras opções
 <application-jar> \
 [application arguments]
 ```
 
+- Executa o aplicativo localmente usando 8 núcleos
+
+```shell
+./bin/spark submit \
+--class org.apache.spark.examples.SparkPi \
+--master local[8] \
+/path/to/examples.jar \
+100
+```
+
+- Executar em um cluster  Spark autônomo no modo de implantação do cliente
+
+```shell
+./bin/spark submit \
+--class org.apache.spark.examples.SparkPi \
+--master spark://207.184.161.138:7077 \
+--executor-memory 20G \
+--total-executor-cores 100 \
+/path/to/examples.jar \
+1000
+```
+
+- Executar em um cluster autônomo Spark emmodo de implantação de cluster com supervisão
+
+```shell
+./bin/spark submit \
+--class org.apache.spark.examples.SparkPi \
+--master spark://207.184.161.138:7077 \
+--deploy mode cluster \
+--suervise \
+--executor-memory 20G \
+--total-executor-cores 100 \
+/path/to/examples.jar \
+1000
+```
+
+- Executa em um cluster YARN e exporta para HADOOP_CONF_DIR = XXX
+
+```shell
+./bin/spark submit \
+--class org.apache.spark.examples.SparkPi \
+--master yarn \
+--deploy-mode cluster \# pode ser cliente para modo cliente
+--executor-memory 20G \
+--num-executors 50 \
+/path/to/examples.jar \
+1000
+```
 
 
- (continuar slide 67)
+
+```shell
+spark submit
+--class com.everis.tricorder.TricorderRun \
+--properties-file spark.conf \
+--files log4j.properties,[Outros arquivos] \
+--conf "spark.executor.extraJavaOptions=-Dlog4j.configuration=file://log4j.properties" \
+--conf "spark.driver.extraJavaOptions=-Dlog4j.configuration=file://log4j.properties" \
+./target/app.jar \
+arg01 “val_arg01" \
+arg02 “val_arg02"
+```
+
+
+
+```shell
+spark.master yarn
+spark.app.name "tricorder"
+spark.yarn.queue Desenvolvimento
+spark.dynamicAllocation.enabled true
+spark.dynamicAllocation.initialExecutors 1
+spark.dynamicAllocation.minExecutors 5
+spark.dynamicAllocation.maxExecutors 10
+spark.shuffle.service.enabled true
+spark.executor.cores 6
+spark.driver.cores 8
+spark.executor.memory 10G
+#spark.yarn.executor.memoryOverhead 1000
+spark.driver.memory 20G
+#spark.yarn.driver.memoryOverhead 1000
+#spark.ui.port 4142
+spark.ui.enabled false
+spark.shuffle.compress true
+spark.driver.maxResultSize 5000m
+spark.default.parallelism 20000
+spark.executor.heartbeatInterval 10s
+spark.dynamicAllocation.sustainedSchedulerBacklogTimeout 1s
+spark.dynamicAllocation.cachedExecutorIdleTimeout 120s
+spark.dynamicAllocation.executorIdleTimeout 60s
+spark.sql.broadcastTimeout 36000
+spark.network.timeout 600s
+spark.serializer org.apache.spark.serializer.KryoSerializer
+spark.sql.shuffle.partitions 20000
+spark.hadoop.hive.exec.dynamic.partition true
+spark.hadoop.hive.exec.dynamic.partition.mode nonstrict
+# Define the root logger with appender X
+log4j.rootLogger = INFO,stdout
+log4j.logger.com.everis = DEBUG,stdout
+# Direct log messages to stdout
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target=System.out
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss}-5p %c{1}:%L-m%n
+```
+
