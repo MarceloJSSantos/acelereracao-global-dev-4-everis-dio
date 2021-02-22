@@ -566,7 +566,7 @@ Spark Submit
 1000
 ```
 
-- Executar em um cluster autônomo Spark emmodo de implantação de cluster com supervisão
+- Executar em um cluster autônomo Spark em modo de implantação de cluster com supervisão
 
 ```shell
 ./bin/spark submit \
@@ -603,8 +603,8 @@ spark submit
 --conf "spark.executor.extraJavaOptions=-Dlog4j.configuration=file://log4j.properties" \
 --conf "spark.driver.extraJavaOptions=-Dlog4j.configuration=file://log4j.properties" \
 ./target/app.jar \
-arg01 “val_arg01" \
-arg02 “val_arg02"
+arg01 "val_arg01" \
+arg02 "val_arg02"
 ```
 
 
@@ -640,8 +640,8 @@ spark.sql.shuffle.partitions 20000
 spark.hadoop.hive.exec.dynamic.partition true
 spark.hadoop.hive.exec.dynamic.partition.mode nonstrict
 # Define the root logger with appender X
-log4j.rootLogger = INFO,stdout
-log4j.logger.com.everis = DEBUG,stdout
+log4j.rootLogger=INFO,stdout
+log4j.logger.com.everis=DEBUG,stdout
 # Direct log messages to stdout
 log4j.appender.stdout=org.apache.log4j.ConsoleAppender
 log4j.appender.stdout.Target=System.out
