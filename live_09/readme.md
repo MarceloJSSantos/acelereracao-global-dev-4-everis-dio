@@ -6,7 +6,7 @@
 
 notebooks:
 
-- [notebook_pipeline_1](./arquivos/notebook_pipeline_1.dbc)
+- [notebook_pipeline_1](./arquivos/notebook_pipeline_1.dbc)(DataBricks)
 
   
 
@@ -284,7 +284,7 @@ https://community.cloud.databricks.com/login.html
 1. criar cluster (Databricks Runtime Version: default )
 2. criar novo notebook (lenguage: Python, cluster: criado anteriormente);
 
-ver [notebook_pipeline_1](./arquivos/notebook_pipeline_1.dbc)
+ver [notebook_pipeline_1](./arquivos/notebook_pipeline_1.dbc) (Notebook DataBricks)
 
 
 
@@ -307,13 +307,3 @@ Compatibilidade
 
 
 ![modo_cluster](./img/compatibilidade_2.png)
-
-
-
-
-
-
-
-​	
-
-[[[[slide 23/63 e vídeo em 48:27]]]]
