@@ -6,11 +6,11 @@
 
 notebooks:
 
-- [notebook_pipeline_1](./arquivos/notebook_pipeline_1.dbc)(DataBricks)
+- [PySpark_everis_p1.ipynb](./arquivos/PySpark_everis_p1.ipynb)
 
   
 
-- Spark
+Spark
 
 - Spark como uma abstração: permite que os desenvolvedores criem rotinas de processamento de dados complexas e de vários estágios, fornecendo uma API de alto nível e uma estrutura tolerante a falhas que permite aos programadores se concentrar na lógica em vez de questões ambientais ou de infraestrutura, como falha de hardware.
 - Spark é rápido, eficiente e escalonável: implementa uma estrutura distribuída e tolerante a falhas na memória chamada Resilient Distributed Dataset (RDD) . O Spark maximiza o uso de memória em várias máquinas, melhorando o desempenho geral em ordens de magnitude. A reutilização dessas estruturas
@@ -284,7 +284,7 @@ https://community.cloud.databricks.com/login.html
 1. criar cluster (Databricks Runtime Version: default )
 2. criar novo notebook (lenguage: Python, cluster: criado anteriormente);
 
-ver [notebook_pipeline_1](./arquivos/notebook_pipeline_1.dbc) (Notebook DataBricks)
+ver [PySpark_everis_p1](./arquivos/PySpark_everis_p1.ipynb)(Notebook DataBricks)
 
 
 
