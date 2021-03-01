@@ -1,0 +1,5 @@
+00001REFRIGERANTE            LATA                COCA-COLA           
+00002CERVEJA                 LATA                BRAHMA              
+00003ENERGÉTICO              GARRAFA 510ml       REDBULL             
+00004CERVEJA                 GARRAFA 600ml       ANTÁTICA            
+00005REFRIGERANTE            PET 2lt             COCA-COLA           
