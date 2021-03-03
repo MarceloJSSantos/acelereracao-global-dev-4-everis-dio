@@ -52,7 +52,7 @@ ARQUITETURAS
 
 ON PREMISES
 
-![arquitetura_on_premise](.\img\arquitetura_on_premise.png)
+![arquitetura_on_premise](./img/arquitetura_on_premise.png)
 
 - Data Source:
 
@@ -80,7 +80,7 @@ ON PREMISES
 
 CLOUD (AWS)
 
-![arquitetura_on_premise](.\img\arquitetura_cloud_aws.png)
+![arquitetura_cloud](./img/arquitetura_cloud_aws.png)
 
 - Devops
   - CodeCommit (git); CodePipeline
@@ -105,7 +105,7 @@ CLOUD (AWS)
 
 Camadas
 
-![arquitetura_on_premise](.\img\camadas.png)
+![camadas](./img/camadas.png)
 
 Quando trabalhamos em um ambiente de Big Data, existem vários formatos de dados. Os dados podem ser formados em um formato legível como arquivo JSON ou CSV, mas isso não significa que essa é a melhor maneira de realmente armazenar os dados.
 
@@ -121,7 +121,7 @@ Cada uma das 3 camadas se tratam de subdiretórios dentro do sistema de arquivos
 
 TIPO DE ARMAZENAMENTOS
 
-![arquitetura_on_premise](.\img\tipos_armazenamento.png)
+![tipos_amazenamentos](./img/tipos_armazenamento.png)
 
 - Parquet
   - Orientado por coluna (armazenar dados em colunas): os armazenamentos de dados orientados por coluna são otimizados para cargas de trabalho analíticas pesadas em leitura
@@ -131,7 +131,7 @@ TIPO DE ARMAZENAMENTOS
 
 Referência: http://parquet.apache.org/documentation/latest/
 
-![arquitetura_on_premise](.\img\formato_parquet.png)
+![parquet](./img/formato_parquet.png)
 
 - Avro
 
@@ -144,7 +144,7 @@ Referência: http://parquet.apache.org/documentation/latest/
 
   Referência: https://avro.apache.org/docs/1.10.1/
 
-![arquitetura_on_premise](.\img\formato_avro.png)
+![avro](./img/formato_avro.png)
 
 - ORC
 
@@ -157,7 +157,7 @@ Referência: http://parquet.apache.org/documentation/latest/
 
   Referência: https://cwiki.apache.org/confluence/display/Hive/LanguageManual+ORC#LanguageManualORC-ORCFiles
 
-  ![arquitetura_on_premise](.\img\formato_orc.png)
+  ![orc](./img/formato_orc.png)
 
 
 
@@ -175,8 +175,8 @@ Ver [PySpark_everis_p2](./arquivos/PySpark_everis_p2.ipynb)(Notebook DataBricks)
 
 Caso de Uso 1
 
-![arquitetura_on_premise](.\img\caso_uso_1.png)
+![caso_uso_1](./img/caso_uso_1.png)
 
 Caso de Uso 2
 
-![arquitetura_on_premise](.\img\caso_uso_2.png)
+![caso_uso_2](./img/caso_uso_2.png)
