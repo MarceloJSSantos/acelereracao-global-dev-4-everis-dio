@@ -173,6 +173,10 @@ Ver [PySpark_everis_p2](./arquivos/PySpark_everis_p2.ipynb)(Notebook DataBricks)
 
 
 
-vídeo até 1:46:50
+Caso de Uso 1
 
-slide até 39/55
+![arquitetura_on_premise](.\img\caso_uso_1.png)
+
+Caso de Uso 2
+
+![arquitetura_on_premise](.\img\caso_uso_2.png)
