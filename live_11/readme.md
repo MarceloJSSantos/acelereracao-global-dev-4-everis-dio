@@ -209,7 +209,7 @@ Grupo de Serviços
 
   - Objetivo: detectar anomalias do fluxo de cliques em tempo real com Amazon Kinesis
 
-  - [Real-time Clickstream Anomaly Detection with Amazon Kinesis Analytics](https://aws.amazon.com/pt/blogs/big data/real time clickstream anomaly detection with amazon kinesis analytics)
+  - https://aws.amazon.com/pt/blogs/big-data/real-time-clickstream-anomaly-detection-with-amazon-kinesis-analytics
 
     ![LAB 1](./img/lab_1.png)
 
@@ -226,8 +226,8 @@ Analisar e compreender os requisitos de negócios e as metas organizacionais é 
 
 Referências úteis
 
-- [](https aws.amazon.com/pt/ec2/pricing/on demand)
-- [](https:// aws.amazon.com/pt/free)
-- [](https:// aws.amazon.com/pt/blogs/big data)
-- [](https:// aws.amazon.com/pt/blogs/aws brasil)
-- [](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html)
+- https://aws.amazon.com/pt/ec2/pricing/on-demand
+- https://aws.amazon.com/pt/free
+- https://aws.amazon.com/pt/blogs/big-data
+- https://aws.amazon.com/pt/blogs/aws-brasil
+- https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html
