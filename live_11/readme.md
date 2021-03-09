@@ -187,7 +187,47 @@ Grupo de Serviços
 
 
 
-vídeo em 28:30
+- Amazon Machine Learning
 
-slides em 27/31
+  - O **Amazon SageMaker Studio** fornece uma única interface visual baseada na web em que você pode realizar todas as etapas de desenvolvimento de ML necessárias para preparar dados e criar, treinar e implantar modelos.
 
+  - O **Amazon Polly** é um serviço que transforma texto em falas realistas, permitindo que você crie aplicativos que falam e desenvolva categorias totalmente inéditas de produtos compatíveis com fala.
+
+  - O **Amazon Comprehend** é um serviço de Natural Language Processing (NLP Processamento de linguagem natural) que usa Machine Learning para encontrar insights e relações dentro de documentos em texto. Nenhuma experiência de Machine Learning necessária.
+
+  - O **Amazon Lex** é um serviço para a criação de interfaces de conversa em qualquer aplicativo usando voz e texto.
+
+  - O **Amazon Rekognition** extrai automaticamente os metadados dos seus arquivos de imagem e vídeo, capturando objetos, rostos, texto e muito mais.
+
+  - O **AWS DeepLens** permite executar modelos de aprendizado profundo localmente na câmera para analisar e agir com base no que é visto.
+
+  - O **Amazon Transcribe** permite que os desenvolvedores adicionem facilmente recursos de conversão de fala em texto às suas aplicações.
+
+    
+
+- **LAB** (não executado na AWS)
+
+  - Objetivo: detectar anomalias do fluxo de cliques em tempo real com Amazon Kinesis
+
+  - [Real-time Clickstream Anomaly Detection with Amazon Kinesis Analytics](https://aws.amazon.com/pt/blogs/big data/real time clickstream anomaly detection with amazon kinesis analytics)
+
+    ![LAB 1](./img/lab_1.png)
+
+    
+
+Lições
+
+Implantações On prime de Apache Hadoop , Spark e storage costumam ter altos custos, configurações rígidas e escala limitada. A migração de análises, processamento de dados (ETL) e cargas de trabalho de ciência de dados para Clouds, como AWS, incluindo Amazon EMR, Glue, Kenisis, etc ... ,ajudam a economizar custos, aumentar a agilidade e melhorar o desempenho em escala.
+Devemos sempre ter algumas lições a serem seguidas a cada novo projeto de Big Data ou qualquer outro objetivo.
+Entender os requisitos/necessidades da sua empresa ou da área de negócio:
+Analisar e compreender os requisitos de negócios e as metas organizacionais é a primeira e mais importante etapa que deve ser realizada, antes mesmo de utilizar a análise de big data em seus projetos em qualquer cloud.
+
+
+
+Referências úteis
+
+- [](https aws.amazon.com/pt/ec2/pricing/on demand)
+- [](https:// aws.amazon.com/pt/free)
+- [](https:// aws.amazon.com/pt/blogs/big data)
+- [](https:// aws.amazon.com/pt/blogs/aws brasil)
+- [](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html)
