@@ -5,7 +5,9 @@
   <tr>
     <td>
       <p align="center">
-        <img src="./img/logo_dio.png" alt="logo_dio" width="50%" />
+	<img src="./img/certificado.png" alt="logo_dio" width="60%" />
+	</br>
+        <img src="./img/logo_dio.png" alt="logo_dio" width="40%" />
         <img src="/img/logo_aceleracao_everis.png" alt="logo_aceleracao_everis" width="20%" />
       </p>
     </td>
