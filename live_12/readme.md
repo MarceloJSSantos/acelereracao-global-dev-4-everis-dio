@@ -588,7 +588,224 @@ listaFiltradaInvertida.foreach(println)
 
 
 
-Parado em:
+Baseado no modelo de map/reduce , também podemos utilizar a função **reduce** do Scala:
 
-- vídeo: 1:27:20
-- slide: 38/55
+```scala
+//Exemplo de redução
+val listaReduceLeft = List[Int](5, 10, 15, 20)
+/*
+v_agregado é o resultado do processamento, no caso da 1ª iteração, será = ao 1.º item da lista
+v_item é = ao próximo item da lista
+*/
+val reduced = listaReduceLeft.reduce ((v_agregado, v_item) => {v_agregado + v_item})
+println(s"Valor Reduzido: $reduced")
+```
+
+```scala
+//Utilizando reduce para encontrar o menor valor
+val minhaListaReduceSide : List[Int] = List(5, 6, 7, 8 ,9, 3, 25)
+val resultadoReduceMin = minhaListaReduceSide.reduce((variavel1, variavel2) =>
+{variavel1 min variavel2})
+println(s"Resultado 'Reduce Right Min': $resultadoReduceMin")
+```
+
+
+
+O **groupBy** é uma função que agrupa os elementos de um iterável, baseando se em um dos elementos internos:
+
+```scala
+/*
+Exemplo de groupby
+Lista de tuplas chave, valor
+*/
+val listaParaAgrupar : List[(String, Int)] = List(("k1", 50), ("k2", 40), ("k3", 15), ("k2",55), ("k3", 10), ("k2", 30))
+val resListAgrup = listaParaAgrupar.groupBy(listTupl => listTupl._1)
+println(s"Resultado Lista Agrupada: $resListAgrup")
+//Resultado Lista Agrupada: Map(k2 -> List((k2,40), (k2,55), (k2,30)), k1 -> //List((k1,50)), k3 -> List((k3,15), (k3,10)))
+```
+
+
+
+O **sortBy** é uma função que ordena os elementos da lista:
+
+```scala
+//Exemplo de sortby
+val listaParaOrdenar : List[(String,Int,Int)] = List(("Valor 25", 50,100), ("Valor 32",
+40,1000), ("Valor 5", 15,1), ("Valor 1",55,5), ("Valor 2", 10,15))
+val resListOrdenada = listaParaOrdenar.sortBy(listTupl => listTupl._3)
+println(s"Resultado Lista Ordenada: $resListOrdenada")
+```
+
+
+
+Definição de Funções
+
+Funções em Scala podem ser definidas da seguinte forma:
+
+- sem retorno (Unit)
+
+  ```scala
+  //Exemplo de função que não retorna valores
+  def minhaFunçãoDeImpressão (inteiro: Int): Unit = {
+  	println(s"O dobro de $inteiro é ${inteiro * 2}")
+  }
+  
+  minhaFunçãoDeImpressão(20)
+  //O dobro de 20 é 40
+  ```
+
+- com retorno (tipo a ser retornado)
+
+  ```scala
+  //Exemplo de função que retorna valores
+  def minhaFunçãoQueRetornaODobro (inteiro: Int): Int = {
+  	inteiro * 2
+  }
+  
+  val inteiro:Int = 20
+  println(s"O dobro de $inteiro é ${minhaFunçãoQueRetornaODobro(inteiro)}")
+  ```
+
+- Também podemos declarar funções dentro de variáveis (mais complicado, mas podemos usar junto SparkSQL):
+
+  - sem retorno (Unit)
+
+    ```scala
+    //Exemplo de funções em variáveis
+    val minhaFuncaoEmVariavel:Int => Unit = (valor: Int) => {
+        println(s"Valor da minha função em variável: ${valor * 4}")
+    }
+    
+    minhaFuncaoEmVariavel(34)
+    ```
+
+    
+
+  - com retorno
+
+    ```scala
+    //Exemplo de funções em variáveis retornando valores
+    val minhaFuncaoRetornandoMultPi:Int => Double = (valor: Int) => {
+        valor * 3.1416
+    }
+    println(s"Resultado da minha função implicita: ${minhaFuncaoRetornandoMultPi(34)}")
+    ```
+
+
+
+**Orientação a Objeto**
+
+Definição e instanciação de uma classe:
+
+```scala
+package com.everis
+class MinhaNovaClasse{
+}
+//Instanciando minha classe
+val minhaClasseInstanciada:MinhaNovaClasse = new MinhaNovaClasse
+```
+
+Construtores:  são definidos no corpo da classe
+
+```scala
+package com.everis
+class MinhaNovaClasse (nome: String){
+	println(s"Nome: $nome")
+}
+
+//Instanciando minha classe
+val minhaClasseInstanciada:MinhaNovaClasse = new MinhaNovaClasse("Marcelo")
+```
+
+Em Scala uma classe pode ter múltiplos construtores:
+
+```scala
+package com.everis
+class MinhaNovaClasse (var nome:String, var idade:Int, var altura:Int){
+	def this(nome:String){
+		this(nome, 0, 0)
+	}
+    
+    def this(nome:String, idade:Int){
+		this(nome, idade, 0)
+	}
+    
+	println(s"Nome: $nome, Idade: $idade, Altura: $altura")
+}
+
+//Instanciando minha classe
+val minhaClasseInstanciada1:MinhaNovaClasse = new MinhaNovaClasse("Marcelo")
+val minhaClasseInstanciada2:MinhaNovaClasse = new MinhaNovaClasse ("Marcelo", 45)
+val minhaClasseInstanciada3: MinhaNovaClasse = new MinhaNovaClasse ("Marcelo", 45, 184)
+```
+
+Métodos de classe são declarados da mesma forma que funções:
+
+```scala
+package com.everis
+class MinhaNovaClasse(nome:String, idade:Int, altura:Int){
+    def meuMetodo:Unit = {
+    	println(s"Meu nome é: $nome")
+    }
+}
+
+// Instanciando minha classe e usando o método
+val minhaClasseInstanciada:MinhaNovaClasse = new MinhaNovaClasse("Marcelo", 45, 184)
+minhaClasseInstanciada.meuMetodo
+```
+
+Variáveis e métodos podem ser **public** , **private** e **protect** , garantindo ou não a visualização dos mesmos.
+
+```scala
+package com.everis
+class MinhaNovaClasse(nome:String, idade:Int, altura:Int){
+	protected val idadeProtegida = idade
+	def meuMetodoPublico:Unit = {
+		qualMeuNome()
+	}
+    private def qualMeuNome():Unit = {
+        println(s"Meu nome é $nome")
+    }
+}
+
+//Instanciando minha classe e usando o método público
+val minhaClasseInstanciada:MinhaNovaClasse = new MinhaNovaClasse("Marcelo", 45, 184)
+minhaClasseInstanciada.qualMeuNome
+minhaClasseInstanciada.meuMetodoPublico
+```
+
+**Herança**
+
+```scala
+package com.everis
+class ClassePai{
+    def metodoPaiPublico:Unit ={
+    	println("Método pai publico")
+	}
+	protected def metodoPaiProtegido:Unit = {
+		println("Método pai protegido")
+    }
+    private def metodoPaiPrivado:Unit = {
+    	println("Método pai privado")
+    }
+}
+
+class ClasseFilha extends ClassePai{
+	def metodoFilhoPublico:Unit = {
+        super.metodoPaiProtegido
+        super.metodoPaiPublico
+    }
+}
+
+val minhaHeranca = new ClasseFilha
+minhaHeranca.metodoPaiPublico
+minhaHeranca.metodoFilhoPublico
+```
+
+
+
+Links úteis
+
+- https://docs.scala-lang.org/?_ga=2.219152154.265858086.1612118441-215605817.1612018441
+- https://alvinalexander.com/scala
+- https://www.amazon.com.br/Learning-Scala-Practical-Functional-Programming-ebook/dp/B00QW1RQ94/ref=sr_1_3?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Scala+language&qid=1612117681&sr=8 3
