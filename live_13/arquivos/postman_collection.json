@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "a0d452f4-0077-4167-9b29-efcabff6ef0b",
+		"name": "Aceleracao Everis - Postman - mockAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": ".../dao/module/usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://605633e4055dbd0017e83d41.mockapi.io/dao/module/usuarios",
+					"protocol": "https",
+					"host": [
+						"605633e4055dbd0017e83d41",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"dao",
+						"module",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": ".../dao/module/usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Júlio Batista da Silva Camargo\",\r\n    \"nickname\" : \"j.silva.camargo\",\r\n    \"age\" : 87\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://605633e4055dbd0017e83d41.mockapi.io/dao/module/usuarios",
+					"protocol": "https",
+					"host": [
+						"605633e4055dbd0017e83d41",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"dao",
+						"module",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": ".../dao/module/uusuarios/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://605633e4055dbd0017e83d41.mockapi.io/dao/module/usuarios/1",
+					"protocol": "https",
+					"host": [
+						"605633e4055dbd0017e83d41",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"dao",
+						"module",
+						"usuarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": ".../dao/module/usuarios/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Marcelo Junior Ferradeiro Sampaio\",\r\n    \"nickname\" : \"m.jr.ferradeiro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://605633e4055dbd0017e83d41.mockapi.io/dao/module/usuarios/2",
+					"protocol": "https",
+					"host": [
+						"605633e4055dbd0017e83d41",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"dao",
+						"module",
+						"usuarios",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": ".../dao/module/usuarios/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://605633e4055dbd0017e83d41.mockapi.io/dao/module/usuarios/5",
+					"protocol": "https",
+					"host": [
+						"605633e4055dbd0017e83d41",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"dao",
+						"module",
+						"usuarios",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
