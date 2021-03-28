@@ -75,10 +75,4 @@ Prática com Postman (https://www.postman.com/downloads/)
 - criar a estrutura no https://www.mockapi.io/
   - criado pois na realização dos exercícios o instrutor já havia apagado o recurso
 - Aplicar os métodos get, post, put e delete
-- Gerado código em Python usando o "Code Snipper" do Postman e executado 
-
-neste [notebook](./notebooks/notebook_aceleracao_everis_codigo_python_postman_code_snippet.ipynb)
-
-
-
-vídeo parado em 00:42:00
+- Gerado código em Python usando o "Code Snipper" do Postman e executado neste [notebook](./notebooks/notebook_aceleracao_everis_codigo_python_postman_code_snippet.ipynb)
