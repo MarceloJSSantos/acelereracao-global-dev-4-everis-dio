@@ -25,7 +25,7 @@ Guia + completo
   - Ctrl + Shift + C
   - Ctrl + Shift + V
 
-  
+
 
 **ATALHOS DE TERMINAL**
 
@@ -51,9 +51,9 @@ Guia + completo
 
 - Estrutura comando/parâmetros
 
-  <comando> -[parâmetro letra] 
+  \<comando> -[parâmetro letra] 
 
-  <comando> --[parâmetro por extenso]
+  \<comando> --[parâmetro por extenso]
 
   ```bash
   ls -a
@@ -62,7 +62,7 @@ Guia + completo
 
 - chamar o manual dos comandos
 	
-	- $ man <comando>
+	- $ man \<comando>
 	
 	  nota:  para sair do manual digitamos 'h' ou 'q'
 	
@@ -70,7 +70,7 @@ Guia + completo
 	  man ls
 	  ```
 	
-	- $ <comando> --help (na língua da instalação do SO, mas alguns comandos pode não estar disponíveis)
+	- $ \<comando> --help (na língua da instalação do SO, mas alguns comandos pode não estar disponíveis)
 	
 	  ```bash
 	  ls --help
@@ -117,7 +117,7 @@ Guia + completo
 
   - mostrar as pastas e arquivos de um caminho específico
 
-    $ ls <caminho da pasta>
+    $ ls \<caminho da pasta>
 
     ```bash
     ls Desktop
@@ -145,27 +145,29 @@ Guia + completo
   ```
 
 - Entrar em pasta específica
-  $ cd <caminho da pasta>
-
+  
+$ cd \<caminho da pasta>
+  
   ```bash
   cd Desktop
-  ```
-
+```
+  
   -  variações
     - cd .. (p/ pasta acima da atual)
     - cd / (p/ o diretório raiz do SO)
-    - cd ~ (p/ o diretório pessoal)
-
+  - cd ~ (p/ o diretório pessoal)
+  
 - criar pasta
-	$ mkdir <nome da pasta>
+	
+	$ mkdir \<nome da pasta>
 	
 	```bash
 	mkdir Documentos/'curso linux'
-	```
-
+```
+	
 - criar arquivo vazio s/conteúdo
 
-  $ touch <nome do arquivo>
+  $ touch \<nome do arquivo>
 
   ```bash
   $ touch 'curso linux'/arquivo_vazio
@@ -173,16 +175,17 @@ Guia + completo
   - atualizar metadados de arquivo
     - $ touch -a (altera a hora de acesso e cria um novo arquivo)
     - $ touch -m (altera a hora de modificação e cria um novo arquivo)
-      $ touch -c (altera a hora de acesso s/ criar um novo arquivo)
-      $ touch -t YYYYMMDDhhmm.ss (altera a hora de acesso e modificação para horário específico)
+    - $ touch -c (altera a hora de acesso s/ criar um novo arquivo)
+    - $ touch -t YYYYMMDDhhmm.ss (altera a hora de acesso e modificação para horário específico)
 
 - copiar arquivo ou pasta
-  $ cp <nome do item> <caminho para onde vai a cópia>
-
+  
+$ cp \<nome do item> \<caminho para onde vai a copia>
+  
   ```bash
   cp arq.txt /home/Documentos
-  ```
-
+```
+  
   - parâmetros
     - $ cp -i (confirma a substituição se já existir)
     - $ cp -v (copia e exibe detalhadamente os arquivos copiados em uma pasta)
@@ -191,11 +194,11 @@ Guia + completo
     - $ cp -u (copia)
     - $ cp -r (copia diretório inteiro (inclusive o diretório)
     - $ cp -r . <destino> (copia diretório inteiro (inclusive o diretório)
-    - $ cp -v <arq1> <arq2> <arqn> <destino>
-
+  - $ cp -v <arq1> <arq2> <arqn> <destino>
+  
 - renomear arquivo ou pasta
 
-  $ mv <nome item a ser renomeado> <novo nome do item>
+  $ mv \<nome item a ser renomeado> \<novo nome do item>
 
   ```bash
   mv arquivo_vazio arquivo_vazio_2
@@ -203,7 +206,7 @@ Guia + completo
 
 - mover arquivo ou pasta
 
-  $ mv <nome item a ser movido> <caminho para onde o item var ser movido>
+  $ mv \<nome item a ser movido> \<caminho para onde o item var ser movido>
 
   ```bash
   # move o arquivo para pasta hierarquicamente superior ('..') a atual
@@ -217,17 +220,21 @@ Guia + completo
     - mv -u (substitui só se arquivo de destino for mais antigo ou não existir)
 
 - remover/deletar pasta
-  $ rmdir <nome da pasta> (vazios)
-  $ rmdir -rf <nome da pasta> (não vazios)
+  
+  $ rmdir \<nome da pasta> (vazios)
 
+  $ rmdir -rf \<nome da pasta> (não vazios)
+  
   ```bash
   rmdir 'curso linux'/teste
   # rmdir: falhou em remover 'curso linux/teste': Diretório não vazio
-  rmdir -rf 'curso linux'/teste
+rmdir -rf 'curso linux'/teste
   ```
-
+  
 - remover arquivos
-	$ rm <nome do arquivo>
+	
+	$ rm \<nome do arquivo>
+	
 	$ rm -r * (apaga todos os arquivos de dentro do diretório)
 	
 	```bash
@@ -237,25 +244,25 @@ Guia + completo
 	
 - visualizar o conteúdo de um arquivo
 
-  - $ cat <nome do arquivo> (ordem normal do texto)
+  - $ cat \<nome do arquivo> (ordem normal do texto)
 
     ```bash
     cat 'curso linux'/arq1.txt
     ```
 
-  - $ tac <nome do arquivo> (ordem inversa do texto)
+  - $ tac \<nome do arquivo> (ordem inversa do texto)
 
     ```bash
     tac 'curso linux'/arq1.txt
     ```
 
-  - $ head <nome do arquvio> (10 primeiras linhas)
+  - $ head \<nome do arquvio> (10 primeiras linhas)
 
     ```bash
     head 'curso linux'/arq1.txt
     ```
 
-  - $ tail <nome do arquvio> (10 últimas linhas)
+  - $ tail \<nome do arquvio> (10 últimas linhas)
 
     ```bash
     tail 'curso linux'/arq1.txt
@@ -280,13 +287,14 @@ Guia + completo
 	nota: no Lubuntu foi preciso instalar ``sudo apt install ncal``
 	
 	- $ cal					           (só mês atual)
-	- $ cal -m [1-12]		      (mês específico)
-	- $ cal <ano>		           (todo ano)
-	- $ cal -m [1-12] <ano>
+	- $ cal -m \<mês 1 a 12>(mês específico)
+	- $ cal \<ano>		           (todo ano)
+	- $ cal -m \<mês 1 a 12> \<ano> (mês e ano)
 	- $ cal > calendario.txt (cria um arquivo com o conteúdo da saída do comando)
 
 - destacando termo em arquivo
-	$ grep <termo> <arquivo>
+	
+	$ grep \<termo> \<arquivo>
 	
 	```bash
 	grep 'casa' 'curso linux'/arq1.txt
@@ -297,33 +305,39 @@ Guia + completo
 	  - $ grep - n (retorna o termo com o número da linha em que aparece)
 	
 - juntando comandos ('|')
-  $ tail <nome arquivo> | grep <termo>
-
+  
+$ tail \<nome arquivo> | grep \<termo>
+  
   ```bash
   tail 'curso linux'/arq1.txt | grep 'casa'
-  ```
-
+```
+  
 - ler arquivo por página
-	$ cat <nome arquivo> | more
-	$ cat <nome arquivo> | less
+	
+	$ cat \<nome arquivo> | more
+	
+	$ cat \<nome arquivo> | less
 	
 	```bash
 	cat curso\ linux/arq1.txt | more
 	
-	cat curso\ linux/arq1.txt | less # para sair do modo 'q'
+cat curso\ linux/arq1.txt | less # para sair do modo 'q'
 	```
-
+	
 - executar comando em conjunto
+	
 	$ ... & ...		(c/ pausa na saída)
+	
 	$ ... && ...	(s/ pausa na saída)
 	
 	```bash
 	ls -l . & tree 'curso linux'
-	mkdir dir1 && cd dir1 # cria pasta e entra nela
+mkdir dir1 && cd dir1 # cria pasta e entra nela
 	```
-
+	
 - exibe qual o tipo de arquivo ou diretório
-	$ file <nome do item>
+	
+	$ file \<nome do item>
 	
 	```bash
 	file arq1.txt
@@ -335,10 +349,11 @@ Guia + completo
 	curso linux/arq1.txt: UTF-8 Unicode text
 	curso linux/arq_tree: UTF-8 Unicode text
 	curso linux/dir25:    directory
-	```
-
+```
+	
 - saber o que um determinado comando faz
-	$ whatis <comando>
+	
+- $ whatis \<comando>
 	
 	```bash
 	whatis file tree cat
@@ -349,23 +364,26 @@ Guia + completo
 	tree (1)             - list contents of directories in a tree-like format.
 	cat (1)              - concatenate files and print on the standard output
 	```
-
+	
 - mostra o local do comando e local de seu manual
-	$ whereis <comando>
-	$ which <comando> 	(só o caminho do programa)
+	
+	$ whereis \<comando>
+	
+	$ which \<comando> 	(só o caminho do programa)
 	
 	```bash
 	whereis tree
 	which tree
 	```
 	
-- procurar arquivo por nome retorna o caminho 
-	$ find <pasta> <pelo que> termo
+- procurar arquivo por nome retorna o caminho
+	
+	$ find \<pasta> \<pelo que> \<termo>
 	
 	- parâmetros
-	- $ find ~ -name "termo" (procura arquivo e diretório pelo nome)
-	- $ find ./ -type d -name "?ermo*" (procura diretório pelo nome usando coringas (?/\*) no termo)
-	- $ find ./ -type f -name "?ermo*" (procura arquivo e diretório oculto pelo nome usando coringas (?/\*) no termo)
+	  - $ find ~ -name "termo" (procura arquivo e diretório pelo nome)
+	  - $ find ./ -type d -name "?ermo*" (procura diretório pelo nome usando coringas (?/\*) no termo)
+	  - $ find ./ -type f -name "?ermo*" (procura arquivo e diretório oculto pelo nome usando coringas (?/\*) no termo)
 	
 	```bash
 	find ./'curso linux' -name "*.txt"
@@ -381,19 +399,20 @@ Guia + completo
   - mostra as variáveis
 
     ```bash
-  # todas
+    # todas
     env
-  # específica
+    
+    #específica
     printenv SHELL
     ```
     
   - cria e define
 
-    - $ env <nome>=<valor> <comando> <opcoes do comando>
+    $ export \<nome>=\<valor>
 
-      ```bash
-      export MEUNOME="Marcelo"
-      ```
+    ```bash
+    export MEUNOME="Marcelo"
+    ```
 
   - encontrar por valor ou variável
 
@@ -432,18 +451,16 @@ Guia + completo
     hh
     ```
 
-    
-
-  nota: para substituir o comando de um apelido é só "settar" novamente
+    nota: para substituir o comando de um apelido é só "settar" novamente
 
   - verificar os apelido criados
 
     ```bash
-    alias
+  alias
     ```
-
+  
     ```
-    alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+  alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
     alias egrep='egrep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias grep='grep --color=auto'
@@ -453,7 +470,7 @@ Guia + completo
     alias ll='ls -alF'
     alias ls='ls --color=auto'
     ```
-
+  
   - excluir um apelido
 
     - específico
@@ -465,11 +482,11 @@ Guia + completo
       $ unalias -a
 
     ```bash
-    unalias hh
+  unalias hh
     ```
-
+  
     ```
-    alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+  alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
     alias egrep='egrep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias grep='grep --color=auto'
@@ -478,16 +495,17 @@ Guia + completo
     alias ll='ls -alF'
     alias ls='ls --color=auto'
     ```
-
+  
 - exibir um arquivo com o nr das linhas (não conta as linhas em branco)
-  $ nl <nome do arquivo>
-
+  
+$ nl \<nome do arquivo>
+  
   - mostra a quantidade de linhas/palavras do arquivo
-  	$ wc -l  <nome do arquivo>	(nr. de linhas)
-  	$ wc -w <nome do arquivo>	(nr. de palavras)
-  	$ wc -m <nome do arquivo>	(nr. de caracteres)
-  	$ wc -c <nome do arquivo>	  (nr. de bytes)
-
+  	- $ wc -l  \<nome do arquivo>	(nr. de linhas)
+  	- $ wc -w \<nome do arquivo>	(nr. de palavras)
+  	- $ wc -m \<nome do arquivo>	(nr. de caracteres)
+	- $ wc -c \<nome do arquivo>	  (nr. de bytes)
+  
   ```bash
   #retorna a quantidade de:
   #-linhas
@@ -495,14 +513,15 @@ Guia + completo
   #-caracteres
   #-bytes
   wc -l -w -m -c 'curso linux'/arq1.txt
-  ```
-
+```
+  
   ```
    37  52 220 245 curso linux/arq1.txt
-  ```
-
+```
+  
 - classifica o conteúdo de um arquivo (não modifica)
-	$ sort <nome arquivo>
+	
+	$ sort \<nome arquivo>
 	
 	```bash
 	# sem modificar
@@ -513,18 +532,21 @@ Guia + completo
 	```
 	
 	- parâmetros
-	- $ sort -n <nome arquivo> (classifica considerando valores numéricos)
-	- $ sort -r <nome arquivo> (ordem decrescente)
-	- $ sort -nr <nome arquivo> (numéricos decrescente)
-
+	  - $ sort -n \<nome arquivo> (classifica considerando valores numéricos)
+	  - $ sort -r \<nome arquivo> (ordem decrescente)
+  - $ sort -nr \<nome arquivo> (numéricos decrescente)
+	
 - mostra diferença entre arquivos
-	$ diff <nome arquivo> <nome arquivo>
+	
+	$ diff \<nome arquivo> \<nome arquivo>
 	
 - mostra uma sequencia de números
+	
 	$ seq 1 100
 	
 - mostra o tempo que um processo leva
-	$ time <comando>
+	
+	$ time \<comando>
 	
 	```bash
 	time tree
@@ -538,17 +560,23 @@ Guia + completo
 	```
 	
 - mostra o tempo que o sistema está rodando
-  $ uptime
-
-- mostra todas as renicializações
-  $ last reboot
-
+  
+$ uptime
+  
+- mostra todas as reinicializações
+  
+$ last reboot
+  
 - logout
-  $ logout
-
+  
+$ logout
+  
 - desligar a maquina
+	
 	$ sudo init 0
+	
 	$ sudo telinit 0
+	
 	$ sudo halt	(pede uma senha para desligar)
 	
 	```bash
@@ -560,7 +588,8 @@ Guia + completo
 **EDIÇÃO DE ARQUIVOS**
 
 - Editor de arquivos padrão do Ubuntu
-	$ nano <nome do arquivo>
+	
+	$ nano \<nome do arquivo>
 	
 	nota para criar um novo arquivo já editando é só abrir um arquivo não existente, editá-lo e salvá-lo.
 	
@@ -676,6 +705,7 @@ Guia + completo
 	- $ w	            (dados mais completos sobre usuário)
 
 - verificar se um host está respondendo
+	
 	$ ping <host>
 	
 	```bash
@@ -685,22 +715,26 @@ Guia + completo
 	```
 	
 - informações sobre o DNS
+  
   $ dig www.google.com
+
   $ dig www.google.com +short
-
+  
 - traçar rota até a um host específico
-  $ traceroute www.google.com
-
-  nota: caso não instalado, opções:
-
+  
+$ traceroute www.google.com
+  
+nota: caso não instalado, opções:
+  
   -  $ sudo apt install inetutils-traceroute
-  - $ sudo apt install traceroute
-
+- $ sudo apt install traceroute
+  
 - informações sobre o usuário logado em nossa máquina
-	$ finger
-		$ sudo apt install finger
+	
+	$ finger (caso necessite instalar ``sudo apt install finger```)
 	
 - mostra informações de roteamento
+	
 	$ route -n
 
 
@@ -708,14 +742,17 @@ Guia + completo
 **USUÁRIOS E CONTAS**
 
 - adicionar usuário
-	$ sudo adduser <nome do usuario>
+	
+	$ sudo adduser \<nome do usuario>
 	
 	```bash
 	sudo adduser user_teste
 	```
 	
 - trocar usuário
+	
 	$ sudo su <nome usuário>
+	
 	$ sudo su  (troca para root)
 	
 	```bash
@@ -723,55 +760,78 @@ Guia + completo
 	```
 	
 - trocar senha
-	$ sudo passwd <nome usuario>
-
-- listar todos os usuários do listema
+	
+$ sudo passwd \<nome usuario>
+	
+- listar todos os usuários do sistema
+	
 	$lastlog
 	
 	```bash
 	# lista de usuários logados nos últimos 10 dias
 	lastlog -t 10
-	```
-
+```
+	
 - lista as entradas e saídas de um usuário
+	
 	$ last	(usuário atual)
-	$ last <nome usuáro>	(usuário específico)
+	
+	$ last \<nome usuário>	(usuário específico)
 	
 	```bash
-	last user_teste
+last user_teste
 	```
-
+	
 - mostrar usuário logado atualmente no sistema
-	$ logname
-
+	
+$ logname
+	
 - mostrar id do usuário e todos os grupos desse usuário
-	$ id
-
+	
+$ id
+	
 - mostrar arquivo /etc/passwd
+	
 	$ cat /etc/passwd
+	
 - exibir todos os grupos do sistema
+	
 	$ cat /etc/group
+	
 - exibir todos os grupos do usuário
+	
 	$ groups
+	
 - criar grupo
-	$ sudo addgroup <nomegrupo>
+	
+	$ sudo addgroup \<nomegrupo>
+	
 - remover grupo
-	$ sudo groupdel <nomegrupo>
+	
+	$ sudo groupdel \<nomegrupo>
+	
 - adicionar usuário a um grupo
-$ sudo adduser <usuario> <grupo>
-$ sudo gpasswd -a <usuario> <grupo>
-- remover usuário de um grupo
-	$ sudo gpasswd -d <usuario> <grupo>
 
+  $ sudo adduser \<usuario> \<grupo>
+
+  $ sudo gpasswd -a \<usuario> \<grupo>
+
+- remover usuário de um grupo
+	
+$ sudo gpasswd -d \<usuario> \<grupo>
+	
 - remover um usuário e a pasta do usuário
-  $ userdel -r <nome usuario>
+  
+  $ userdel -r \<nome usuario>
 
 
 
 **PERMISSÕES (arquivos e pastas)**
 
 r - read (leitura)
+
 w - write (escrita)
+
 x - eXecution (execução)
 
 
@@ -802,7 +862,8 @@ x - eXecution (execução)
 	```
 
 - mudar a permissão de um arquivo/diretório
-	$ chmod <cod octal> <nome do arquivo ou pasta>
+	
+	$ chmod \<cod octal> \<nome do arquivo ou pasta>
 	
 	modo octal 
 	r = 4
@@ -825,8 +886,8 @@ x - eXecution (execução)
 
   - compactar
 
-    - $ gzip <nome arquivo ou pasta> (taxa de compactação normal)
-    - $ gzip -9 <nome arquivo ou pasta><taxa de compactacao> (taxa de compactação máxima)
+    - $ gzip \<nome arquivo ou pasta> (taxa de compactação normal)
+    - $ gzip -9 \<nome arquivo ou pasta><taxa de compactacao> (taxa de compactação máxima)
 
     ```
     gzip -9 arq_gzip/*
@@ -853,85 +914,101 @@ x - eXecution (execução)
       - **-t** : verifica a integridade do arquivo compactado.
 
   - descompactar
-    $ gunzip <arquivo gz>
+    
+  $ gunzip \<arquivo gz>
+    
+    $ gzip -d \<arquivo gz>
 
-    $ gzip -d <arquivo gz>
+
 
 - zip
 
   - compactar usando zip
-    $ zip <nome do arquivo zipado> [lista de arquivos <nome do arquivo a ser zipado>]
-
+    
+  $ zip \<nome do arquivo zipado> \<lista de arquivos a ser zipado>]
+    
     ```bash
     zip arq_zip/arqs.zip arq_zip/*
-    ```
-
-     - mesmo após já criado o zip podemos adicionar outros arquivos
-
+  ```
+    
+   - mesmo após já criado o zip podemos adicionar outros arquivos
+    
        ```bash
        zip -u arq_zip/arqs.zip new_arq.txt
-       ```
-
-       
-
+     ```
+    
   - descompactar
-  	$ unzip <arquivo zip> (todos os arquivos)
+  	
+  	$ unzip \<arquivo zip> (todos os arquivos)
   	
   	```
   	unzip arq_zip/arqs.zip
   	```
   	
-  	$ unzip <arquivo zip><arquivo especifico> (arquivo específico)
+  	$ unzip \<arquivo zip> \<arquivo especifico> (arquivo específico)
   	
   	```
   	unzip arq_zip/arqs.zip new_arq.txt
   	```
   	
-  	$ unzip -r <arquivo zip> (todos os arquivos e subpastas)
+  	$ unzip -r \<arquivo zip> (todos os arquivos e subpastas)
   	
   	```
   	unzip -r arq_zip/arqs.zip
   	```
+
+
 
 - bzip2 (mais atual que os anteriores)
 
   O arquivo (ou conjunto de arquivos) é substituído por um arquivo compactado (para cada arquivo) com a extensão *.bz2* (igual gzip)
 
   - compactar
-    $ bzip2 <arquivo ou pasta ou lista a ser compactados>
+    
+    $ bzip2 \<arquivo ou pasta ou lista a ser compactados>
+    
   - descompactar
-  	$ bzip2 -d <arquivo bz2>
+  	
+  	$ bzip2 -d \<arquivo bz2>
+
+
 
 - rar
 
   Necessita ser instalado ``sudo apt install rar``
 
   - compactar
-  	$ rar a <arquivo rar> <arquivos ou pastas a ser compactado>
+  	
+  	$ rar a \<arquivo rar> \<arquivos ou pastas a ser compactado>
   	
   	nota: 'a' é um comando do comando 'rar', e não um parâmetro, por isso não é '-a'
   	
   - descompactar
-  	$ rar x <arquivo.rar>
+  	
+  	$ rar x \<arquivo rar>
 
 
 
 **ARQUIVADORES**
 
 - arquivar (conjunto de arquivos)
-	$ tar -cf <arquivo tar><arquivos a ser arquivado>
-		- nota: após aquivarmos podemos compactar esse conjunto de arquivos
+
+  $ tar -cf \<arquivo tar> \<arquivos a ser arquivado>
+  nota: após arquivarmos podemos compactar esse conjunto de arquivos
+
 - desarquivar
-	$ tar -jx <arquivo tar> ou <arquivo tar gz> (se compactado)
+	
+	$ tar -jx \<arquivo tar> ou \<arquivo tar gz> (se compactado)
+	
 - parâmetros
 	- **-c** : cria um novo arquivo *tar*.
-	- **-j** ou **−−bzip2** : compacta/descompacta os arquivos usando [**bzip2**.](https://guialinux.uniriotec.br/bzip2/)
+	- **-j** ou **−−bzip2** : compacta/descompacta os arquivos usando bzip2
 	- **-J** ou **−−xz** : descompacta os arquivos .xz e .lzma.
 	- **-t** : lista o conteúdo do arquivo *tar*.
 	- **-x** : extrai o conteúdo do arquivo *tar*.
 	- **-v** : mostra mensagens.
 	- **-f arquivo** : define o nome do arquivo *tar*.
-	- **-z** ou **−−gzip** ou **−−gunzip** : compacta/descompacta os arquivos usando [**gzip**/**gunzip**](https://guialinux.uniriotec.br/gzip/).
+	- **-z** ou **−−gzip** ou **−−gunzip** : compacta/descompacta os arquivos usando gzip**/**gunzip
 	- **-Z** ou **−−compress** ou **−−uncompress** : compacta/descompacta os arquivos usando **compress**.
 	- **-?, −−help** : mostra as opções do comando.
 	- **−−version** : mostra informações sobre o aplicativo.
@@ -953,15 +1030,19 @@ sites de pacotes
 - apt
 
   - instalação
-    $ sudo apt install <pacote>
-
+    
+  $ sudo apt install \<pacote>
+    
   - atualizar
-  	$ sudo apt upgrade <pacote>
+  	
+  	$ sudo apt upgrade \<pacote>
   	
   - remover
-  	$ sudo apt remove <pacote>
+  	
+  	$ sudo apt remove \<pacote>
   	
   - atualizar o sistema junto com os pacotes
+  	
   	$ sudo apt update && apt upgrade
   	
   - Verifica se as resoluções das dependências estão corretas.
@@ -976,33 +1057,48 @@ sites de pacotes
 
     sudo apt-cache search searched-package
 
+
+
 - dplg (pacotes .deb baixados)
   - instalação
-    $ sudo dpkg -i <arquivo baixado deb>
-  - obtendo a descrição do pacote
-    $ sudo dpkg -I <arquivo deb>
-
+    
+    $ sudo dpkg -i \<arquivo baixado deb>
+    
+- obtendo a descrição do pacote
+    
+  $ sudo dpkg -I \<arquivo deb>
+    
   - remover
-    $ sudo dpkg -r <nome do pacote> (package na descrição do pacote)
+    
+    $ sudo dpkg -r \<nome do pacote> (package na descrição do pacote)
     	
 
 **Redhat (Fedora, CentOS, RHEL)**
 
 - rpm
   - instalação
-    $ sudo rpm -ivh <pacote rpm> (baixado de sites como o dpkg.com)
-    $ sudo rpm -ivh --nodeps <pacote rpm> (se houver problemas com dependências)
+    
+    $ sudo rpm -ivh \<pacote rpm> (baixado de sites como o dpkg.com)
+    
+    $ sudo rpm -ivh --nodeps \<pacote rpm> (se houver problemas com dependências)
+    
   - atualização
-  	$ sudo rpm -U <pacote rpm>
+  	
+	$ sudo rpm -U \<pacote rpm>
   	
   - remoção
-  	$ sudo rpm -e <pacote rpm>
-
+  	
+  	$ sudo rpm -e \<pacote rpm>
+  
 - yum
   - instalação
-    $ sudo yum install <nome do pacote>
-  - atualização
-  	$ sudo yum update <nome do pacote>
-
+    
+    $ sudo yum install \<nome do pacote>
+    
+- atualização
+  	
+  $ sudo yum update \<nome do pacote>
+  	
   - remoção
-  	$ sudo yum remove <nome do pacote>
+  	
+  	$ sudo yum remove \<nome do pacote>
