@@ -458,7 +458,7 @@ $ cd \<caminho da pasta>
   - verificar os apelido criados
 
     ```bash
-  alias
+    alias
     ```
 
     ```
