@@ -229,7 +229,7 @@ $ cd \<caminho da pasta>
   ```sh
   rmdir 'curso linux'/teste
   # rmdir: falhou em remover 'curso linux/teste': Diretório não vazio
-rmdir -rf 'curso linux'/teste
+  rmdir -rf 'curso linux'/teste
   ```
 
 - remover arquivos
@@ -301,6 +301,7 @@ rmdir -rf 'curso linux'/teste
 	grep 'casa' 'curso linux'/arq1.txt
 	```
 	
+	
 	- parâmetros
 	  - $ grep - c (retorna o número de ocorrências do termo)
 	  - $ grep - n (retorna o termo com o número da linha em que aparece)
@@ -333,7 +334,7 @@ rmdir -rf 'curso linux'/teste
 	
 	```bash
 	ls -l . & tree 'curso linux'
-mkdir dir1 && cd dir1 # cria pasta e entra nela
+	mkdir dir1 && cd dir1 # cria pasta e entra nela
 	```
 	
 - exibe qual o tipo de arquivo ou diretório
@@ -461,7 +462,7 @@ mkdir dir1 && cd dir1 # cria pasta e entra nela
     ```
 
     ```
-  alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+    alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
     alias egrep='egrep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias grep='grep --color=auto'
@@ -483,11 +484,11 @@ mkdir dir1 && cd dir1 # cria pasta e entra nela
       $ unalias -a
 
     ```bash
-  unalias hh
+    unalias hh
     ```
 
     ```
-  alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+    alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
     alias egrep='egrep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias grep='grep --color=auto'
