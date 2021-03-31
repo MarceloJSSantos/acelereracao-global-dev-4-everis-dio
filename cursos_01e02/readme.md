@@ -146,31 +146,32 @@ Guia + completo
 
 - Entrar em pasta específica
   
+
 $ cd \<caminho da pasta>
-  
+
   ```bash
   cd Desktop
-```
-  
+  ```
+
   -  variações
     - cd .. (p/ pasta acima da atual)
     - cd / (p/ o diretório raiz do SO)
-  - cd ~ (p/ o diretório pessoal)
-  
+      - cd ~ (p/ o diretório pessoal)
+    
 - criar pasta
 	
 	$ mkdir \<nome da pasta>
 	
 	```bash
 	mkdir Documentos/'curso linux'
-```
+	```
 	
 - criar arquivo vazio s/conteúdo
 
   $ touch \<nome do arquivo>
 
   ```bash
-  $ touch 'curso linux'/arquivo_vazio
+  touch 'curso linux'/arquivo_vazio
   ```
   - atualizar metadados de arquivo
     - $ touch -a (altera a hora de acesso e cria um novo arquivo)
@@ -180,12 +181,12 @@ $ cd \<caminho da pasta>
 
 - copiar arquivo ou pasta
   
-$ cp \<nome do item> \<caminho para onde vai a copia>
+  $ cp \<nome do item> \<caminho para onde vai a copia>
   
-  ```bash
+  ```sh
   cp arq.txt /home/Documentos
-```
-  
+  ```
+
   - parâmetros
     - $ cp -i (confirma a substituição se já existir)
     - $ cp -v (copia e exibe detalhadamente os arquivos copiados em uma pasta)
@@ -194,8 +195,8 @@ $ cp \<nome do item> \<caminho para onde vai a copia>
     - $ cp -u (copia)
     - $ cp -r (copia diretório inteiro (inclusive o diretório)
     - $ cp -r . <destino> (copia diretório inteiro (inclusive o diretório)
-  - $ cp -v <arq1> <arq2> <arqn> <destino>
-  
+      - $ cp -v <arq1> <arq2> <arqn> <destino>
+    
 - renomear arquivo ou pasta
 
   $ mv \<nome item a ser renomeado> \<novo nome do item>
@@ -306,12 +307,12 @@ rmdir -rf 'curso linux'/teste
 	
 - juntando comandos ('|')
   
-$ tail \<nome arquivo> | grep \<termo>
+  $ tail \<nome arquivo> | grep \<termo>
   
-  ```bash
+  ```sh
   tail 'curso linux'/arq1.txt | grep 'casa'
-```
-  
+  ```
+
 - ler arquivo por página
 	
 	$ cat \<nome arquivo> | more
@@ -321,9 +322,9 @@ $ tail \<nome arquivo> | grep \<termo>
 	```bash
 	cat curso\ linux/arq1.txt | more
 	
-cat curso\ linux/arq1.txt | less # para sair do modo 'q'
+	cat curso\ linux/arq1.txt | less # para sair do modo 'q'
 	```
-	
+
 - executar comando em conjunto
 	
 	$ ... & ...		(c/ pausa na saída)
@@ -349,11 +350,11 @@ mkdir dir1 && cd dir1 # cria pasta e entra nela
 	curso linux/arq1.txt: UTF-8 Unicode text
 	curso linux/arq_tree: UTF-8 Unicode text
 	curso linux/dir25:    directory
-```
-	
+	```
+
 - saber o que um determinado comando faz
 	
-- $ whatis \<comando>
+	$ whatis \<comando>
 	
 	```bash
 	whatis file tree cat
@@ -366,34 +367,34 @@ mkdir dir1 && cd dir1 # cria pasta e entra nela
 	```
 	
 - mostra o local do comando e local de seu manual
-	
-	$ whereis \<comando>
-	
-	$ which \<comando> 	(só o caminho do programa)
-	
-	```bash
-	whereis tree
-	which tree
-	```
-	
+
+  $ whereis \<comando>
+
+  $ which \<comando> 	(só o caminho do programa)
+
+  ```bash
+  whereis tree
+  which tree
+  ```
+
 - procurar arquivo por nome retorna o caminho
-	
-	$ find \<pasta> \<pelo que> \<termo>
-	
-	- parâmetros
-	  - $ find ~ -name "termo" (procura arquivo e diretório pelo nome)
-	  - $ find ./ -type d -name "?ermo*" (procura diretório pelo nome usando coringas (?/\*) no termo)
-	  - $ find ./ -type f -name "?ermo*" (procura arquivo e diretório oculto pelo nome usando coringas (?/\*) no termo)
-	
-	```bash
-	find ./'curso linux' -name "*.txt"
-	```
-	
-	```
-	./curso linux/arq_q.txt
-	./curso linux/arq1.txt
-	```
-	
+
+  $ find \<pasta> \<pelo que> \<termo>
+
+  - parâmetros
+    - $ find ~ -name "termo" (procura arquivo e diretório pelo nome)
+    - $ find ./ -type d -name "?ermo*" (procura diretório pelo nome usando coringas (?/\*) no termo)
+    - $ find ./ -type f -name "?ermo*" (procura arquivo e diretório oculto pelo nome usando coringas (?/\*) no termo)
+
+  ```bash
+  find ./'curso linux' -name "*.txt"
+  ```
+
+  ```
+  ./curso linux/arq_q.txt
+  ./curso linux/arq1.txt
+  ```
+
 - variáveis de ambiente
 
   - mostra as variáveis
@@ -458,7 +459,7 @@ mkdir dir1 && cd dir1 # cria pasta e entra nela
     ```bash
   alias
     ```
-  
+
     ```
   alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
     alias egrep='egrep --color=auto'
@@ -470,7 +471,7 @@ mkdir dir1 && cd dir1 # cria pasta e entra nela
     alias ll='ls -alF'
     alias ls='ls --color=auto'
     ```
-  
+
   - excluir um apelido
 
     - específico
@@ -484,7 +485,7 @@ mkdir dir1 && cd dir1 # cria pasta e entra nela
     ```bash
   unalias hh
     ```
-  
+
     ```
   alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
     alias egrep='egrep --color=auto'
@@ -495,30 +496,30 @@ mkdir dir1 && cd dir1 # cria pasta e entra nela
     alias ll='ls -alF'
     alias ls='ls --color=auto'
     ```
-  
+
 - exibir um arquivo com o nr das linhas (não conta as linhas em branco)
-  
-$ nl \<nome do arquivo>
-  
+
+  $ nl \<nome do arquivo>
+
   - mostra a quantidade de linhas/palavras do arquivo
-  	- $ wc -l  \<nome do arquivo>	(nr. de linhas)
-  	- $ wc -w \<nome do arquivo>	(nr. de palavras)
-  	- $ wc -m \<nome do arquivo>	(nr. de caracteres)
-	- $ wc -c \<nome do arquivo>	  (nr. de bytes)
-  
-  ```bash
-  #retorna a quantidade de:
-  #-linhas
-  #-palavras
-  #-caracteres
-  #-bytes
-  wc -l -w -m -c 'curso linux'/arq1.txt
-```
-  
-  ```
-   37  52 220 245 curso linux/arq1.txt
-```
-  
+       - $ wc -l  \<nome do arquivo>	(nr. de linhas)
+       - $ wc -w \<nome do arquivo>	(nr. de palavras)
+       - $ wc -m \<nome do arquivo>	(nr. de caracteres)
+    - $ wc -c \<nome do arquivo>	  (nr. de bytes)
+
+    ```sh
+    #retorna a quantidade de:
+    #-linhas
+    #-palavras
+    #-caracteres
+    #-bytes
+    wc -l -w -m -c 'curso linux'/arq1.txt
+    ```
+
+    ```
+    37  52 220 245 curso linux/arq1.txt   
+    ```
+
 - classifica o conteúdo de um arquivo (não modifica)
 	
 	$ sort \<nome arquivo>
@@ -561,16 +562,19 @@ $ nl \<nome do arquivo>
 	
 - mostra o tempo que o sistema está rodando
   
+
 $ uptime
-  
+
 - mostra todas as reinicializações
   
+
 $ last reboot
-  
+
 - logout
   
+
 $ logout
-  
+
 - desligar a maquina
 	
 	$ sudo init 0
@@ -722,10 +726,11 @@ $ logout
   
 - traçar rota até a um host específico
   
+
 $ traceroute www.google.com
-  
+
 nota: caso não instalado, opções:
-  
+
   -  $ sudo apt install inetutils-traceroute
 - $ sudo apt install traceroute
   
@@ -761,17 +766,18 @@ nota: caso não instalado, opções:
 	
 - trocar senha
 	
+
 $ sudo passwd \<nome usuario>
 	
 - listar todos os usuários do sistema
 	
-	$lastlog
+	$ lastlog
 	
 	```bash
 	# lista de usuários logados nos últimos 10 dias
 	lastlog -t 10
-```
-	
+	```
+
 - lista as entradas e saídas de um usuário
 	
 	$ last	(usuário atual)
@@ -781,35 +787,35 @@ $ sudo passwd \<nome usuario>
 	```bash
 last user_teste
 	```
-	
+
 - mostrar usuário logado atualmente no sistema
 	
-$ logname
+	$ logname
 	
 - mostrar id do usuário e todos os grupos desse usuário
-	
-$ id
-	
+
+  $ id	
+
 - mostrar arquivo /etc/passwd
-	
-	$ cat /etc/passwd
-	
+
+  $ cat /etc/passwd
+
 - exibir todos os grupos do sistema
-	
-	$ cat /etc/group
-	
+
+  $ cat /etc/group
+
 - exibir todos os grupos do usuário
-	
-	$ groups
-	
+
+  $ groups
+
 - criar grupo
-	
-	$ sudo addgroup \<nomegrupo>
-	
+
+  $ sudo addgroup \<nomegrupo>
+
 - remover grupo
-	
-	$ sudo groupdel \<nomegrupo>
-	
+
+  $ sudo groupdel \<nomegrupo>
+
 - adicionar usuário a um grupo
 
   $ sudo adduser \<usuario> \<grupo>
@@ -817,11 +823,11 @@ $ id
   $ sudo gpasswd -a \<usuario> \<grupo>
 
 - remover usuário de um grupo
-	
-$ sudo gpasswd -d \<usuario> \<grupo>
-	
+
+  $ sudo gpasswd -d \<usuario> \<grupo>	
+
 - remover um usuário e a pasta do usuário
-  
+
   $ userdel -r \<nome usuario>
 
 
@@ -915,8 +921,9 @@ x - eXecution (execução)
 
   - descompactar
     
+  
   $ gunzip \<arquivo gz>
-    
+  
     $ gzip -d \<arquivo gz>
 
 
@@ -925,12 +932,13 @@ x - eXecution (execução)
 
   - compactar usando zip
     
+  
   $ zip \<nome do arquivo zipado> \<lista de arquivos a ser zipado>]
-    
+  
     ```bash
     zip arq_zip/arqs.zip arq_zip/*
-  ```
-    
+    ```
+  
    - mesmo após já criado o zip podemos adicionar outros arquivos
     
        ```bash
@@ -1031,8 +1039,9 @@ sites de pacotes
 
   - instalação
     
+  
   $ sudo apt install \<pacote>
-    
+  
   - atualizar
   	
   	$ sudo apt upgrade \<pacote>
@@ -1053,8 +1062,8 @@ sites de pacotes
   	
   	$ sudo apt-get clean
   	
-  - Retorna a lista de pacotes que corresponde à série ‘pacotes’
-
+- Retorna a lista de pacotes que corresponde à série ‘pacotes’
+  
     sudo apt-cache search searched-package
 
 
@@ -1063,11 +1072,11 @@ sites de pacotes
   - instalação
     
     $ sudo dpkg -i \<arquivo baixado deb>
-    
+  
 - obtendo a descrição do pacote
-    
+  
   $ sudo dpkg -I \<arquivo deb>
-    
+  
   - remover
     
     $ sudo dpkg -r \<nome do pacote> (package na descrição do pacote)
@@ -1084,7 +1093,8 @@ sites de pacotes
     
   - atualização
   	
-	$ sudo rpm -U \<pacote rpm>
+	
+  $ sudo rpm -U \<pacote rpm>
   	
   - remoção
   	
@@ -1094,7 +1104,7 @@ sites de pacotes
   - instalação
     
     $ sudo yum install \<nome do pacote>
-    
+  
 - atualização
   	
   $ sudo yum update \<nome do pacote>
