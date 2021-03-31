@@ -196,7 +196,7 @@ $ cd \<caminho da pasta>
     - $ cp -r (copia diretório inteiro (inclusive o diretório)
     - $ cp -r . <destino> (copia diretório inteiro (inclusive o diretório)
       - $ cp -v <arq1> <arq2> <arqn> <destino>
-    
+  
 - renomear arquivo ou pasta
 
   $ mv \<nome item a ser renomeado> \<novo nome do item>
@@ -226,19 +226,19 @@ $ cd \<caminho da pasta>
 
   $ rmdir -rf \<nome da pasta> (não vazios)
   
-  ```bash
+  ```sh
   rmdir 'curso linux'/teste
   # rmdir: falhou em remover 'curso linux/teste': Diretório não vazio
 rmdir -rf 'curso linux'/teste
   ```
-  
+
 - remover arquivos
 	
 	$ rm \<nome do arquivo>
 	
 	$ rm -r * (apaga todos os arquivos de dentro do diretório)
 	
-	```bash
+	```sh
 	rm 'curso linux'/teste/arq.txt 'curso linux'/teste/arq_4.txt
 	rm -r 'curso linux'/*
 	```
@@ -247,25 +247,25 @@ rmdir -rf 'curso linux'/teste
 
   - $ cat \<nome do arquivo> (ordem normal do texto)
 
-    ```bash
+    ```sh
     cat 'curso linux'/arq1.txt
     ```
 
   - $ tac \<nome do arquivo> (ordem inversa do texto)
 
-    ```bash
+    ```sh
     tac 'curso linux'/arq1.txt
     ```
 
   - $ head \<nome do arquvio> (10 primeiras linhas)
 
-    ```bash
+    ```sh
     head 'curso linux'/arq1.txt
     ```
 
   - $ tail \<nome do arquvio> (10 últimas linhas)
 
-    ```bash
+    ```sh
     tail 'curso linux'/arq1.txt
     ```
 
@@ -1061,7 +1061,7 @@ sites de pacotes
   - Limpa o cache de pacotes baixados
   	
   	$ sudo apt-get clean
-  	
+  
 - Retorna a lista de pacotes que corresponde à série ‘pacotes’
   
     sudo apt-cache search searched-package
