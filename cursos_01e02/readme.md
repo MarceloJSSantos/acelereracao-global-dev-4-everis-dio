@@ -786,7 +786,7 @@ $ sudo passwd \<nome usuario>
 	$ last \<nome usuário>	(usuário específico)
 	
 	```bash
-last user_teste
+        last user_teste
 	```
 
 - mostrar usuário logado atualmente no sistema
@@ -944,25 +944,25 @@ x - eXecution (execução)
     
        ```bash
        zip -u arq_zip/arqs.zip new_arq.txt
-     ```
+       ```
     
   - descompactar
   	
   	$ unzip \<arquivo zip> (todos os arquivos)
   	
-  	```
+  	```bash
   	unzip arq_zip/arqs.zip
   	```
   	
   	$ unzip \<arquivo zip> \<arquivo especifico> (arquivo específico)
   	
-  	```
+  	```bash
   	unzip arq_zip/arqs.zip new_arq.txt
   	```
   	
   	$ unzip -r \<arquivo zip> (todos os arquivos e subpastas)
   	
-  	```
+  	```bash
   	unzip -r arq_zip/arqs.zip
   	```
 
