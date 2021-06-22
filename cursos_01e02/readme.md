@@ -57,7 +57,7 @@ Guia + completo
 
   ```bash
   ls -a
-  ls -all
+  ls --all
   ```
 
 - chamar o manual dos comandos
@@ -195,7 +195,10 @@ $ cd \<caminho da pasta>
     - $ cp -u (copia)
     - $ cp -r (copia diretório inteiro (inclusive o diretório)
     - $ cp -r . <destino> (copia diretório inteiro (inclusive o diretório)
-      - $ cp -v <arq1> <arq2> <arqn> <destino>
+
+      ```sh
+      cp -v <arq1> <arq2> <arqn> <destino>
+      ```
   
 - renomear arquivo ou pasta
 
